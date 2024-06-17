@@ -81,7 +81,7 @@
   <div class="container">
     <h2>About</h2>
     <div class="profile-image mx-auto">
-      <img src="C:\Users\johna\Desktop\johnny.jpeg" class="img-fluid" alt="Profile Picture">
+      <img src="main\johnny.jpeg" class="img-fluid" alt="Profile Picture">
     </div>
     <div class="mt-4">
       <p>I'm an aspiring data analytics professional with a solid foundation in statistics. Recently completing the Google Data Analytics Professional Certificate, I bring advanced proficiency in key analytical tools such as SQL, Excel, Tableau, and R. With a background in chemical engineering, my expertise lies in leveraging data-driven approaches to solve complex problems. My communication, organizational, and analytical skills contribute to my ability to derive actionable insights from diverse datasets</p>
