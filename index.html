@@ -3,279 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>Johnathan Faria's Data Analyst Portfolio</title>
   <!-- Bootstrap CSS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css"> <!-- Link to your custom CSS file -->
   <style>
-    /* Custom CSS */
-
-
-.navbar-nav .nav-link {
-      font-size: 20px;
-      padding: 0 100px; /* Adjust the padding as needed */
+    /* Additional Custom Styles */
+    body {
+      background-image: url('path/to/your/background-image.jpg'); /* Set your background image */
+      background-size: cover; /* Cover the entire background */
+      background-position: center; /* Center the image */
+      height: 100vh; /* Full height of the viewport */
+      display: flex; /* Use flexbox for centering */
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      color: white; /* Text color */
+      text-align: center; /* Center text */
     }
 
-    .portfolio-header {
-      background-color: #87CEEB; /* BB blue color */
-      color: #fff; /* White text color */
-      padding: 20px 0; /* Adjust the padding as needed */
+    .navbar {
+      margin-bottom: 20px; /* Space between navbar and title */
     }
 
-    /* Center the content vertically */
-    .about-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+    .navbar-nav .nav-link {
+      font-size: 20px; /* Adjust font size */
+      padding: 0 20px; /* Padding for nav links */
     }
 
-    /* Style for the image */
-    .profile-image {
-      width: 150px; /* Adjust the size as needed */
-      height: 150px; /* Adjust the size as needed */
-      border: 4px solid #fff; /* Solid border */
-      border-radius: 50%; /* Rounded shape */
-      overflow: hidden; /* Hide overflow to make sure it's round */
+    .portfolio-title {
+      font-size: 3rem; /* Title size */
+      margin-bottom: 30px; /* Spacing below title */
     }
 
-    /* Responsive design */
-    @media (max-width: 768px) {
-      .profile-image {
-        width: 100px; /* Adjust the size for smaller screens */
-        height: 100px; /* Adjust the size for smaller screens */
-      }
+    .nav-item {
+      margin: 0 10px; /* Space between nav items */
     }
-.skills-section {
-  background-color: #343a40;
-  color: #ffffff;
-  padding: 80px 0; /* Adjust padding as needed */
-}
-
-.skills-section h2 {
-  color: #ffffff; /* Text color for the section heading */
-}
-
-.skills-section .card {
-  background-color: #495057; /* Background color for the skill cards */
-  border: none; /* Remove default border */
-  margin-bottom: 20px; /* Adjust spacing between cards */
-}
-
-.skills-section .card-body {
-  padding: 20px;
-}
-
-.skills-section .card-title {
-  color: #ffffff; /* Text color for skill titles */
-}
-
-.skills-section .card-text {
-  color: #dee2e6; /* Text color for skill descriptions */
-}
-
-.skills-section .btn-primary {
-  background-color: #007bff; /* Button background color */
-  border-color: #007bff; /* Button border color */
-}
-
-.skills-section .btn-primary:hover {
-  background-color: #0056b3; /* Button background color on hover */
-  border-color: #0056b3; /* Button border color on hover */
-}
-
   </style>
 </head>
 <body>
 
-<!-- Name's Portfolio -->
-<section id="portfolio" class="portfolio-header text-center">
-  <h1>Johnathan Faria's Portfolio</h1>
-</section>
-
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-blue bg-light">
-  <div class="container">
-    <ul class="navbar-nav">
-     <li class="nav-item">
-        <a class="nav-link" href="#about">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#projects">Projects</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#skills">Skills</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#contact">Contact Me</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<!-- About Section -->
-<section id="about" class="about-section bg-dark text-white">
-  <div class="container">
-    <h2>About</h2>
-    <div class="profile-image mx-auto">
-      <img src="images/johnny.jpeg" class="img-fluid" alt="Profile Picture">
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="projects.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="skills.html">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Me</a>
+        </li>
+      </ul>
     </div>
-    <div class="mt-4">
-      <p>Data Analyst with 5+ years of experience in SQL querying, Python programming, Excel, advanced data visualization tools like Tableau & Power BI and data manipulation. Delivered over $100,000 in annual client savings through optimized dashboards and data-driven decision-making.</p>
-	<p>Skilled in communicating effectively with senior leadership and adapting reports to changing business requirements while working at the intersection of business and technology.</p></div>
-  </div>
-</section>
+  </nav>
 
-
-
-
-<!-- Projects Section -->
-<div class="mt-4">
-<section id="projects" class="projects-section bg-light">
+  <!-- Title Section -->
   <div class="container">
-    <h2 class="text-center mb-4">My Latest Projects</h2>
-    <div class="row">
-
-      <!-- Project 1 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100">
-          <img src="images/project_1.jpeg" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">NBA Champions' DNA Analysis</h5>
-            <p class="card-text">This project analyzes NBA championship teams' statistical performance, utilizing advanced statistical techniques and a unique approach to evaluate player productivity. It identifies common traits among winning teams and standout players, emphasizing the importance of statistical prowess in championship success. </p>
-
-            <a href="https://johnathanfaria.blogspot.com/p/nba-champions-dna-analysis.html" class="btn btn-primary">Blog Post</a>
-           
-          </div>
-        </div>
-      </div>
-	    
-      <!-- Project 2 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100">
-          <img src="images/thesis.jpg" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">Bayesian State Estimation in Biochemical Processes</h5>
-            <p class="card-text">Led a research project evaluating Bayesian state estimators for optimizing biochemical processes. Utilized advanced statistical metrics including confidence intervals and covariance matrices to assess estimator performance. Identified and recommended the most effective state estimator, achieving a 30-fold increase in accuracy compared to alternative methods.</p>
-            <a href="https://johnathanfaria.blogspot.com/p/from-data-to-insights-enhancing.html" class="btn btn-primary">Blog Post</a>
-           <!-- <a href="#" class="btn btn-secondary">Source Code</a>-->
-          </div>
-        </div>
-      </div> 
-      <!-- Project 3 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100">
-          <img src="images/tennis.jpg" class="card-img-top" alt="Project 2">
-          <div class="card-body">
-            <h5 class="card-title">Automating Tennis Odds Collection: A Powerful Tool for Sports Analysts and Bettors </h5>
-            <p class="card-text">This project automates the extraction and management of tennis betting odds using image processing, OCR, and Google Sheets. It enhances images, extracts and cleans text, validates data, and uploads it to Google Sheets, streamlining data collection for sports analysts and bettors while reducing errors and saving time.</p>
-           <a href="https://johnathanfaria.blogspot.com/p/tennis-odds-extraction-from-bet-365.html" class="btn btn-primary">Blog Post</a>             <!-- <a href="#" class="btn btn-secondary">Source Code</a> -->
-          </div>
-        </div>
-      </div>
-
-
-
-    </div>
+    <h1 class="portfolio-title">Johnathan Faria's Data Analyst Portfolio</h1>
   </div>
-</section>
 
-<!-- Skills Section -->
-<section id="skills" class="skills-section py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Areas of interest</h2>
-    <div class="row">
-      <div class="col-md-2">
-        <div class="card text-center">
-          <img src="images/excel.jpg" class="card-img-top" alt="Skill 1">
-          <div class="card-body">
-            <h5 class="card-title">Excel</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-2">
-        <div class="card text-center">
-          <img src="images/skills3.png" class="card-img-top" alt="Skill 2">
-          <div class="card-body">
-            <h5 class="card-title">SQL</h5>
-            
-          </div>
-        </div>
-      </div>
-      <div class="col-md-2">
-        <div class="card text-center">
-          <img src="images/stat.png" class="card-img-top" alt="Skill 3">
-          <div class="card-body">
-            <h5 class="card-title">Advanced Stats</h5>          
-          </div>
-        </div>
-      </div>
-      <div class="col-md-2">
-        <div class="card text-center">
-          <img src="images/python.jpg" class="card-img-top" alt="Skill 4">
-          <div class="card-body">
-            <h5 class="card-title">Python</h5>           
-          </div>
-        </div>
-      </div>
-      <div class="col-md-2">
-        <div class="card text-center">
-          <img src="images/skills2.png" class="card-img-top" alt="Skill 5">
-          <div class="card-body">
-            <h5 class="card-title">Data Visualization</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-2">
-        <div class="card text-center">
-          <img src="images/skills4.png" class="card-img-top" alt="Skill 6">
-          <div class="card-body">
-            <h5 class="card-title">Data Storytelling</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact Me Section -->
-<section id="contact" class="contact-section">
-  <div class="container">
-    <h2 class="text-center mb-4">Contact Me</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="contact-details mb-4">
-          <p>
-	<h5>Feel free to reach out to me via Email, Phone or Linkedin!</h5>
-		  <p>
-          </p>
-            <img src="images\email.png" alt="Email Icon" style="width: 24px; height: 24px; margin-right: 10px;">
-            Email: <a href="mailto:fariajohnathan@gmail.com">fariajohnathan@gmail.com</a>
-          </p>
-          <p>
-            <img src="images\phone.png" alt="Phone Icon" style="width: 24px; height: 24px; margin-right: 10px;">
-            Phone: <a href="tel:+353 83 117 0585">+353 83 117 0585</a>
-          </p>
-        </div> 	
-        <div class="contact-icons">
-          <a href="https://www.linkedin.com/in/johnathanfaria" target="_blank">
-            <img src="images\linkedin.png" alt="LinkedIn" style="width: 24px; height: 24px; margin-right: 10px;">
-		LinkedIn <a href="tel:LinkedIn"></a>
-
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-<!-- Bootstrap JS and jQuery (Optional) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Bootstrap JS and jQuery (Optional) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
