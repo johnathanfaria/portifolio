@@ -1,1 +1,102 @@
+/* About Section Styling */
+.about-section {
+  background-color: #343a40; /* Dark background */
+  color: #ffffff; /* White text color */
+  padding: 80px 0; /* Adjust padding for top and bottom */
+}
+
+.about-section h2 {
+  color: #ffffff; /* Text color for the section heading */
+  margin-bottom: 30px; /* Spacing below the heading */
+  font-size: 2.5rem; /* Font size for heading */
+}
+
+.about-section .profile-image {
+  width: 150px; /* Adjust the size as needed */
+  height: 150px; /* Adjust the size as needed */
+  border: 4px solid #ffffff; /* Solid border */
+  border-radius: 50%; /* Rounded shape */
+  overflow: hidden; /* Hide overflow to make sure it's round */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.about-section p {
+  font-size: 1.1rem; /* Font size for paragraphs */
+  margin-bottom: 20px; /* Spacing below paragraphs */
+  line-height: 1.6; /* Improved readability */
+}
+
+.about-section h5 {
+  margin-top: 20px; /* Spacing above h5 elements */
+  font-size: 1.5rem; /* Font size for subheading */
+}
+
+.about-section ul {
+  list-style-type: disc; /* Bullet points for the list */
+  margin-left: 20px; /* Indentation for the list */
+}
+
+.about-section ul li {
+  margin-bottom: 10px; /* Spacing between list items */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-section h2 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .about-section .profile-image {
+    width: 100px; /* Adjust the size for smaller screens */
+    height: 100px; /* Adjust the size for smaller screens */
+  }
+
+  .about-section p {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+
+
+
+/* Project Carousel Styling */
+.carousel-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+
+.project-item {
+  position: relative;
+  text-align: center;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-item img {
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.project-item h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+.project-item p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.project-item .btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.project-item .btn-secondary {
+  margin-bottom: 20px;
+}
 
