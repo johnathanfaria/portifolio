@@ -1,22 +1,164 @@
-<section id="about" class="about-section bg-light py-5">
-  <div class="container text-center">
-    <h2>About Me</h2>
-    <div class="profile-image my-4">
-      <img src="images/johnny.jpeg" alt="Profile Picture" class="rounded-circle img-fluid" style="width: 150px; height: 150px;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Johnathan Faria</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Full Page Background */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa; /* Light background */
+    }
+
+    /* Navigation Bar */
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      background-color: rgba(211, 211, 211, 0.8); /* Light gray background */
+      padding: 15px;
+      margin-bottom: 30px; /* Space between navbar and content */
+    }
+
+    .nav-links li {
+      margin: 0 15px;
+    }
+
+    .nav-links a {
+      font-size: 1.5rem;
+      color: black; /* Black color for nav links */
+      text-decoration: none;
+      padding: 10px 20px;
+      border: 2px solid black;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: black;
+      color: white;
+    }
+
+    /* About Section */
+    .about-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 0;
+      background-color: #ffffff;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+
+    .profile-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for image */
+      margin-right: 40px;
+    }
+
+    .profile-image img {
+      width: 100%;
+      height: auto;
+    }
+
+    .summary {
+      max-width: 600px;
+    }
+
+    .summary h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .summary p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .key-projects ul {
+      padding-left: 20px;
+    }
+
+    .key-projects li {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .key-projects li strong {
+      font-weight: bold;
+      color: #007bff; /* Highlight key terms */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .about-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .profile-image {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+
+      .summary h2 {
+        font-size: 2rem;
+      }
+
+      .summary p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="contact.html">Contact Me</a></li>
+  </ul>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <!-- Profile Image -->
+    <div class="profile-image">
+      <img src="images/johnny.jpeg" alt="Johnathan Faria">
     </div>
-    <p class="about-description">
-      Experienced Data Analyst with over 5 years of expertise in SQL, Python, Excel, and advanced data visualization (Tableau & Power BI), driving data-driven decision-making and optimizing processes to achieve significant savings.
-    </p>
-    <p class="about-description">
-      Some key projects include:
-      <ul class="text-left mx-auto" style="max-width: 600px;">
-        <li><strong>Cost Reduction</strong>: Achieved $50,000/year in savings for a trucking company by refining data models and optimizing processes with SQL and Python.</li>
-        <li><strong>Data-Driven Solutions</strong>: Enabled a $15,000/year salary increase for a PhD professor by analyzing 10k+ student evaluations, uncovering key insights through data manipulation and statistical analysis.</li>
-        <li><strong>Waste Reduction</strong>: Helped reduce food waste by €30,000/year using SQL, Excel, and Python, creating actionable dashboards in Tableau.</li>
-      </ul>
-    </p>
-    <p class="about-description">
-      I’m passionate about using data to drive strategic goals, improve efficiency, and generate impactful insights. I look forward to contributing my skills in data analysis, trend analysis, and visualization to your team!
-    </p>
-  </div>
-</section>
+
+    <!-- Summary -->
+    <div class="summary">
+      <h2>About Me</h2>
+      <p>Experienced Data Analyst with over 5 years of expertise in SQL, Python, Excel, and advanced data visualization (Tableau & Power BI), driving data-driven decision-making and optimizing processes to achieve significant savings.</p>
+      <p class="key-projects">
+        <strong>Some key projects include:</strong>
+        <ul>
+          <li><strong>Cost Reduction:</strong> Achieved $50,000/year in savings for a trucking company by refining data models and optimizing processes with SQL and Python.</li>
+          <li><strong>Data-Driven Solutions:</strong> Enabled a $15,000/year salary increase for a PhD professor by analyzing 10k+ student evaluations, uncovering key insights through data manipulation and statistical analysis.</li>
+          <li><strong>Waste Reduction:</strong> Helped reduce food waste by €30,000/year using SQL, Excel, and Python, creating actionable dashboards in Tableau.</li>
+        </ul>
+      </p>
+      <p>I’m passionate about using data to drive strategic goals, improve efficiency, and generate impactful insights. I look forward to contributing my skills in data analysis, trend analysis, and visualization to your team!</p>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS and jQuery (Optional) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
