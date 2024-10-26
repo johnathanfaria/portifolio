@@ -23,13 +23,13 @@
       color: white;
     }
 
-    /* Title Styling */
+    /* Title Styling with Black Outline (Contorno) */
     h1 {
       font-size: 3.5rem;
       text-align: center;
       margin-top: 20px;
-      color: white;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+      color: white; /* Font color */
+      text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000; /* Black outline (contorno) */
     }
 
     /* Centered Navigation Bar */
@@ -48,19 +48,20 @@
       margin: 0 15px;
     }
 
+    /* Make Navigation Text Black */
     .nav-links a {
       font-size: 1.5rem;
-      color: white;
+      color: black; /* Changed to black */
       text-decoration: none;
       padding: 10px 20px;
-      border: 2px solid white;
+      border: 2px solid black; /* Changed border to black */
       border-radius: 8px;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .nav-links a:hover {
-      background-color: white;
-      color: #007bff;
+      background-color: black;
+      color: white;
     }
 
     /* Responsive Styling */
@@ -78,7 +79,7 @@
 </head>
 <body>
 
-  <!-- Title at the Top -->
+  <!-- Title at the Top with Outline -->
   <h1>Johnathan Faria's Data Analyst Portfolio</h1>
 
   <!-- Centered Navigation Bar -->
