@@ -4,14 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects - Johnathan Faria</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* Full Page Background */
+    /* Use Roboto Font */
     body {
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f8f9fa; /* Light background */
+      background-color: #f4f7f6;
     }
 
     /* Navigation Bar */
@@ -19,9 +22,9 @@
       display: flex;
       justify-content: center;
       list-style: none;
-      padding: 0;
-      background-color: rgba(211, 211, 211, 0.8); /* Light gray background */
       padding: 15px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
       margin-bottom: 30px;
     }
 
@@ -30,67 +33,98 @@
     }
 
     .nav-links a {
-      font-size: 1.5rem;
-      color: black; /* Black color for nav links */
+      font-size: 1.2rem;
+      color: #333;
       text-decoration: none;
       padding: 10px 20px;
-      border: 2px solid black;
-      border-radius: 8px;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      border-radius: 5px;
+      transition: all 0.3s ease;
     }
 
     .nav-links a:hover {
-      background-color: black;
-      color: white;
+      background-color: #007bff;
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
     }
 
-    /* Project Carousel Section */
+    /* Projects Section */
     .projects-section {
       text-align: center;
       padding: 50px 0;
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
 
     .projects-section h2 {
       font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-
-    .project-carousel {
-      max-width: 800px;
-      margin: auto;
-      position: relative;
-    }
-
-    .project-item {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .project-item img {
-      max-width: 100%;
-      max-height: 500px;
-      object-fit: cover;
-      margin-bottom: 20px;
-    }
-
-    .project-item.active {
-      display: flex;
-    }
-
-    .project-description {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-
-    .btn-primary {
-      padding: 10px 20px;
-      font-size: 1.2rem;
-    }
-
-    .btn-all-projects {
       margin-bottom: 40px;
-      font-size: 1.2rem;
+      color: #333;
+    }
+
+    /* Project Cards */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 0 50px;
+    }
+
+    .project-card {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 20px rgba(0, 123, 255, 0.2);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-card .card-body {
+      padding: 20px;
+      text-align: left;
+    }
+
+    .project-card h4 {
+      font-size: 1.5rem;
+      color: #007bff;
+      margin-bottom: 15px;
+    }
+
+    .project-card p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .project-card .btn-primary {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .project-card .btn-primary:hover {
+      background-color: #0056b3;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .projects-grid {
+        padding: 0 20px;
+      }
     }
   </style>
 </head>
@@ -107,46 +141,40 @@
 
   <!-- Projects Section -->
   <section class="projects-section">
+    <h2>Highlighted Projects</h2>
 
-    <h2>My Latest Projects</h2>
-
-    <div id="projectCarousel" class="project-carousel">
+    <div class="projects-grid">
       <!-- Project 1 -->
-      <div class="project-item active">
-        <img src="images/project_1.jpeg" alt="Project 1 Thumbnail">
-        <p class="project-description">NBA Champions' DNA Analysis: This project analyzes NBA championship teams' statistical performance and identifies common traits among winning teams and standout players.</p>
-        <a href="https://johnathanfaria.blogspot.com/p/nba-champions-dna-analysis.html" target="_blank" class="btn btn-primary">Read More</a> <!-- Open in new tab -->
+      <div class="project-card">
+        <img src="images/project_1.jpeg" alt="Project 1">
+        <div class="card-body">
+          <h4>NBA Champions' DNA Analysis</h4>
+          <p>This project analyzes NBA championship teams' statistical performance and identifies common traits among winning teams and standout players.</p>
+          <a href="https://johnathanfaria.blogspot.com/p/nba-champions-dna-analysis.html" target="_blank" class="btn btn-primary">Read More</a>
+        </div>
       </div>
 
       <!-- Project 2 -->
-      <div class="project-item">
-        <img src="images/thesis.jpg" alt="Project 2 Thumbnail">
-        <p class="project-description">Bayesian State Estimation in Biochemical Processes: Evaluated Bayesian state estimators, optimizing biochemical processes with a 30-fold increase in accuracy.</p>
-        <a href="https://johnathanfaria.blogspot.com/p/from-data-to-insights-enhancing.html" target="_blank" class="btn btn-primary">Read More</a> <!-- Open in new tab -->
+      <div class="project-card">
+        <img src="images/thesis.jpg" alt="Project 2">
+        <div class="card-body">
+          <h4>Bayesian State Estimation in Biochemical Processes</h4>
+          <p>Evaluated Bayesian state estimators, optimizing biochemical processes with a 30-fold increase in accuracy.</p>
+          <a href="https://johnathanfaria.blogspot.com/p/from-data-to-insights-enhancing.html" target="_blank" class="btn btn-primary">Read More</a>
+        </div>
       </div>
 
       <!-- Project 3 -->
-      <div class="project-item">
-        <img src="images/tennis.jpg" alt="Project 3 Thumbnail">
-        <p class="project-description">Automating Tennis Odds Collection: A project that automates tennis betting odds extraction using image processing, OCR, and Google Sheets.</p>
-        <a href="https://johnathanfaria.blogspot.com/p/tennis-odds-extraction-from-bet-365.html" target="_blank" class="btn btn-primary">Read More</a> <!-- Open in new tab -->
+      <div class="project-card">
+        <img src="images/tennis.jpg" alt="Project 3">
+        <div class="card-body">
+          <h4>Automating Tennis Odds Collection</h4>
+          <p>A project that automates tennis betting odds extraction using image processing, OCR, and Google Sheets.</p>
+          <a href="https://johnathanfaria.blogspot.com/p/tennis-odds-extraction-from-bet-365.html" target="_blank" class="btn btn-primary">Read More</a>
+        </div>
       </div>
     </div>
   </section>
-
-  <!-- JavaScript for Carousel -->
-  <script>
-    const projects = document.querySelectorAll('.project-item');
-    let currentProject = 0;
-
-    function showNextProject() {
-      projects[currentProject].classList.remove('active');
-      currentProject = (currentProject + 1) % projects.length;
-      projects[currentProject].classList.add('active');
-    }
-
-    setInterval(showNextProject, 7000); // Change project every 7 seconds
-  </script>
 
   <!-- Bootstrap JS and jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
