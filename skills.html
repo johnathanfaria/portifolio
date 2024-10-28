@@ -1,160 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skills - Filtered View</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <!-- Bootstrap CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <style>
-    /* Basic Styles */
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f7f6;
-    }
-
-    .nav-links {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      padding: 15px;
-      background-color: #ffffff;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      margin-bottom: 50px;
-    }
-
-    .nav-links li {
-      margin: 0 15px;
-    }
-
-    .nav-links a {
-      font-size: 1.2rem;
-      color: #333;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      transition: all 0.3s ease;
-    }
-
-    /* Skills Section */
-    .skills-section {
-      text-align: center;
-      padding: 50px 0;
-      background-color: #ffffff;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      padding: 0 50px;
-    }
-
-    .skill-card {
-      background-color: #ffffff;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    .skill-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 6px 20px rgba(0, 123, 255, 0.2);
-    }
-
-    .skill-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .skill-card .card-body {
-      padding: 20px;
-      text-align: left;
-    }
-
-    .skill-card h4 {
-      font-size: 1.5rem;
-      color: #007bff;
-      margin-bottom: 15px;
-    }
-
-    .skill-card p {
-      font-size: 1rem;
-      color: #555;
-      margin-bottom: 20px;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Navigation Bar -->
-  <ul class="nav-links">
-    <li><a href="index.html">About</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="skills.html">Skills</a></li>
-    <li><a href="contact.html">Contact Me</a></li>
-  </ul>
-
-  <section class="skills-section">
-    <h2>My Skills</h2>
-    <div class="skills-grid">
-      <!-- Skill 1: SQL -->
-      <div class="skill-card">
-        <img src="images/skills_sql.jpg" alt="SQL Skill">
-        <div class="card-body">
-          <h4>SQL</h4>
-          <p>Proficient in SQL for querying databases, performing data manipulation, and managing large datasets efficiently.</p>
-        </div>
-      </div>
-
-      <!-- Skill 2: Python -->
-      <div class="skill-card">
-        <img src="images/skills_python.jpg" alt="Python Skill">
-        <div class="card-body">
-          <h4>Python</h4>
-          <p>Experienced in Python programming for data analysis, machine learning, and automation using popular libraries like Pandas and NumPy.</p>
-        </div>
-      </div>
-
-      <!-- Skill 3: Data Visualization -->
-      <div class="skill-card">
-        <img src="images/skills_visualization.jpg" alt="Data Visualization Skill">
-        <div class="card-body">
-          <h4>Data Visualization</h4>
-          <p>Skilled in using tools like Tableau and Power BI to create interactive visualizations that make data insights easily understandable.</p>
-        </div>
-      </div>
-
-      <!-- Skill 4: Excel -->
-      <div class="skill-card">
-        <img src="images/skills_excel.jpg" alt="Excel Skill">
-        <div class="card-body">
-          <h4>Excel</h4>
-          <p>Advanced Excel skills including pivot tables, data analysis, and VBA automation for streamlined data processing.</p>
-        </div>
-      </div>
-
-      <!-- Skill 5: Data Analysis -->
-      <div class="skill-card">
-        <img src="images/skills_data_analysis.jpg" alt="Data Analysis Skill">
-        <div class="card-body">
-          <h4>Data Analysis</h4>
-          <p>Expertise in performing exploratory data analysis to uncover trends, patterns, and actionable insights.</p>
-        </div>
+<section class="skills-section">
+  <h2>My Skills</h2>
+  <div class="skills-grid">
+    <!-- Skill 1: SQL -->
+    <div class="skill-card">
+      <img src="images/skills_sql.jpg" alt="SQL Skill">
+      <div class="card-body">
+        <h4>SQL</h4>
+        <p>Proficient in SQL for querying databases, performing data manipulation, and managing large datasets efficiently.</p>
       </div>
     </div>
-  </section>
 
-  <!-- Bootstrap JS -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+    <!-- Skill 2: Python -->
+    <div class="skill-card">
+      <img src="images/skills_python.jpg" alt="Python Skill">
+      <div class="card-body">
+        <h4>Python</h4>
+        <p>Experienced in Python programming for data analysis, machine learning, and automation using popular libraries like Pandas and NumPy.</p>
+      </div>
+    </div>
+
+    <!-- Skill 3: Tableau -->
+    <div class="skill-card">
+      <img src="images/skills_tableau.jpg" alt="Tableau Skill">
+      <div class="card-body">
+        <h4>Tableau</h4>
+        <p>Expert in using Tableau for creating interactive dashboards and data visualizations to effectively communicate insights.</p>
+      </div>
+    </div>
+
+    <!-- Skill 4: Power BI -->
+    <div class="skill-card">
+      <img src="images/skills_powerbi.jpg" alt="Power BI Skill">
+      <div class="card-body">
+        <h4>Power BI</h4>
+        <p>Proficient in Power BI to develop and publish interactive reports and dashboards to assist in data-driven decision making.</p>
+      </div>
+    </div>
+
+    <!-- Skill 5: Advanced Stats -->
+    <div class="skill-card">
+      <img src="images/skills_advanced_stats.jpg" alt="Advanced Stats Skill">
+      <div class="card-body">
+        <h4>Advanced Stats</h4>
+        <p>Experience with advanced statistical methods and tools for deriving actionable insights from complex datasets.</p>
+      </div>
+    </div>
+
+    <!-- Skill 6: Stakeholder Communication -->
+    <div class="skill-card">
+      <img src="images/skills_communication.jpg" alt="Stakeholder Communication Skill">
+      <div class="card-body">
+        <h4>Stakeholder Communication</h4>
+        <p>Strong ability to communicate data findings effectively with stakeholders at different levels of technical proficiency.</p>
+      </div>
+    </div>
+  </div>
+</section>
