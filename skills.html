@@ -78,28 +78,11 @@
       box-shadow: 0 6px 20px rgba(0, 123, 255, 0.2);
     }
 
-    .skill-circle {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      border: 10px solid #ddd;
-      margin: 0 auto 20px auto;
-      position: relative;
-      background: conic-gradient(#007bff calc(var(--progress) * 1%), #ddd 0%);
-    }
-
-    .skill-circle::after {
-      content: attr(data-progress) "%";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      font-weight: bold;
+    .skill-icon {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      margin-bottom: 15px;
     }
 
     .skill-name {
@@ -112,6 +95,31 @@
       text-align: left;
       font-size: 0.9rem;
       color: #555;
+      margin-bottom: 20px;
+    }
+
+    .skill-bar {
+      height: 20px;
+      width: 100%;
+      background-color: #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .skill-bar-fill {
+      height: 100%;
+      background-color: #007bff;
+      position: absolute;
+    }
+
+    /* Skill Level Indicators */
+    .skill-levels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: #555;
+      margin-top: 5px;
     }
   </style>
 </head>
@@ -132,37 +140,61 @@
 
       <!-- Skill Item: Excel -->
       <div class="skill-item">
-        <div class="skill-circle" style="--progress: 95;" data-progress="95"></div>
+        <img src="images/excel.png" alt="Excel Icon" class="skill-icon">
         <div class="skill-name">Excel</div>
         <div class="skill-description">
           <p>Started learning in 2008 during childhood. Mastered advanced features in 2020, including VBA and VLOOKUP. Applied Excel in a data analysis context in every project since 2021.</p>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width: 95%;"></div>
+        </div>
+        <div class="skill-levels">
+          <span>Elementary</span><span>Beginner</span><span>Intermediate</span><span>Upper-Intermediate</span><span>Advanced</span>
         </div>
       </div>
 
       <!-- Skill Item: Python -->
       <div class="skill-item">
-        <div class="skill-circle" style="--progress: 80;" data-progress="80"></div>
+        <img src="images/python.png" alt="Python Icon" class="skill-icon">
         <div class="skill-name">Python</div>
         <div class="skill-description">
           <p>Began learning Python in 2017 during college for engineering. Gained experience with data manipulation libraries and have been using Python professionally since 2020.</p>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width: 80%;"></div>
+        </div>
+        <div class="skill-levels">
+          <span>Elementary</span><span>Beginner</span><span>Intermediate</span><span>Upper-Intermediate</span><span>Advanced</span>
         </div>
       </div>
 
       <!-- Skill Item: SQL -->
       <div class="skill-item">
-        <div class="skill-circle" style="--progress: 85;" data-progress="85"></div>
+        <img src="images/sql.png" alt="SQL Icon" class="skill-icon">
         <div class="skill-name">SQL</div>
         <div class="skill-description">
           <p>First contact in 2020. Quickly developed proficiency, applying SQL for large datasets in professional and personal projects.</p>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width: 85%;"></div>
+        </div>
+        <div class="skill-levels">
+          <span>Elementary</span><span>Beginner</span><span>Intermediate</span><span>Upper-Intermediate</span><span>Advanced</span>
         </div>
       </div>
 
       <!-- Skill Item: Tableau -->
       <div class="skill-item">
-        <div class="skill-circle" style="--progress: 75;" data-progress="75"></div>
+        <img src="images/tableau.png" alt="Tableau Icon" class="skill-icon">
         <div class="skill-name">Tableau</div>
         <div class="skill-description">
           <p>Started using Tableau in 2022 to create dashboards, including projects for logistic truck companies.</p>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width: 75%;"></div>
+        </div>
+        <div class="skill-levels">
+          <span>Elementary</span><span>Beginner</span><span>Intermediate</span><span>Upper-Intermediate</span><span>Advanced</span>
         </div>
       </div>
 
