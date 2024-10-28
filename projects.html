@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects - Johnathan Faria</title>
+  <title>Projects - Filtered View</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* Use Roboto Font */
+    /* Basic Styles */
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
@@ -17,7 +17,6 @@
       background-color: #f4f7f6;
     }
 
-    /* Navigation Bar */
     .nav-links {
       display: flex;
       justify-content: center;
@@ -41,13 +40,30 @@
       transition: all 0.3s ease;
     }
 
-    .nav-links a:hover {
-      background-color: #007bff;
-      color: #fff;
-      box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+    /* Filter Buttons */
+    .filter-buttons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      gap: 10px;
     }
 
-    /* Projects Section */
+    .filter-btn {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .filter-btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Project Cards */
     .projects-section {
       text-align: center;
       padding: 50px 0;
@@ -55,13 +71,6 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
 
-    .projects-section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 40px;
-      color: #333;
-    }
-
-    /* Project Cards */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -76,11 +85,6 @@
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    .project-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 6px 20px rgba(0, 123, 255, 0.2);
     }
 
     .project-card img {
@@ -110,38 +114,6 @@
       display: flex;
       gap: 10px;
     }
-
-    .btn-primary, .btn-secondary {
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1rem;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-
-    .btn-primary {
-      background-color: #007bff;
-    }
-
-    .btn-primary:hover {
-      background-color: #0056b3;
-    }
-
-    .btn-secondary {
-      background-color: #28a745;
-    }
-
-    .btn-secondary:hover {
-      background-color: #218838;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .projects-grid {
-        padding: 0 20px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -155,30 +127,38 @@
     <li><a href="contact.html">Contact Me</a></li>
   </ul>
 
+  <!-- Filter Buttons -->
+  <div class="filter-buttons">
+    <button class="filter-btn" onclick="filterProjects('all')">Show All</button>
+    <button class="filter-btn" onclick="filterProjects('data-analysis')">Data Analysis</button>
+    <button class="filter-btn" onclick="filterProjects('visualization')">Visualization</button>
+    <button class="filter-btn" onclick="filterProjects('automation')">Automation</button>
+  </div>
+
   <!-- Projects Section -->
   <section class="projects-section">
     <h2>Highlighted Projects</h2>
-
     <div class="projects-grid">
-      <!-- Project 1 -->
-      <div class="project-card">
+      
+      <!-- Project 1: NBA Champions' DNA Analysis -->
+      <div class="project-card data-analysis">
         <img src="images/project_1.jpeg" alt="Project 1">
         <div class="card-body">
           <h4>NBA Champions' DNA Analysis</h4>
-          <p>This project analyzes NBA championship teams' statistical performance and identifies common traits among winning teams and standout players.</p>
+          <p>Analysis of NBA championship teams' statistical performance and common traits.</p>
           <div class="btn-container">
             <a href="https://johnathanfaria.blogspot.com/p/nba-champions-dna-analysis.html" target="_blank" class="btn btn-primary">Read More</a>
-            <a href="https://github.com/johnathanfaria/nba-dna-analysis" target="_blank" class="btn btn-secondary">View Code on GitHub</a>
+            <a href="https://github.com/johnathanfaria/NBA-Champions-DNA" target="_blank" class="btn btn-secondary">View Code on GitHub</a>
           </div>
         </div>
       </div>
 
-      <!-- New Project 2: Top Nations Lead in Work-Life Harmony -->
-      <div class="project-card">
-        <img src="images/work-life-bal.png" alt="Top Nations Work-Life Balance">
+      <!-- Project 2: Top Nations Lead in Work-Life Harmony -->
+      <div class="project-card visualization">
+        <img src="images/work_life_balance.jpeg" alt="Work-Life Balance">
         <div class="card-body">
-          <h4>Top Nations Lead in Work-Life Harmony and GDP Growth</h4>
-          <p>Exploring the link between work-life balance and economic prosperity, using visualizations of statutory leave, maternity leave, and hours worked.</p>
+          <h4>Top Nations in Work-Life Harmony</h4>
+          <p>Exploring the correlation between work-life balance and GDP growth.</p>
           <div class="btn-container">
             <a href="https://johnathanfaria.blogspot.com/p/top-nations-lead-in-work-life-harmony.html" target="_blank" class="btn btn-primary">Read More</a>
             <a href="https://github.com/johnathanfaria/work-life-balance" target="_blank" class="btn btn-secondary">View Code on GitHub</a>
@@ -187,11 +167,11 @@
       </div>
 
       <!-- Project 3: Bayesian State Estimation in Biochemical Processes -->
-      <div class="project-card">
-        <img src="images/thesis.jpg" alt="Project 3">
+      <div class="project-card data-analysis">
+        <img src="images/thesis.jpg" alt="Biochemical Process">
         <div class="card-body">
           <h4>Bayesian State Estimation in Biochemical Processes</h4>
-          <p>Evaluated Bayesian state estimators, optimizing biochemical processes with a 30-fold increase in accuracy.</p>
+          <p>Evaluated Bayesian estimators for biochemical process optimization.</p>
           <div class="btn-container">
             <a href="https://johnathanfaria.blogspot.com/p/from-data-to-insights-enhancing.html" target="_blank" class="btn btn-primary">Read More</a>
             <a href="https://github.com/johnathanfaria/biochemical-processes-estimation" target="_blank" class="btn btn-secondary">View Code on GitHub</a>
@@ -199,24 +179,38 @@
         </div>
       </div>
 
-      <!-- Project 4: Automating Tennis Odds Collection -->
-      <div class="project-card">
-        <img src="images/tennis.jpg" alt="Project 4">
+      <!-- Project 4: Unveiling the Data Behind Football's Greatest -->
+      <div class="project-card automation">
+        <img src="images/football_analysis.jpeg" alt="Football Analysis">
         <div class="card-body">
-          <h4>Automating Tennis Odds Collection</h4>
-          <p>A project that automates tennis betting odds extraction using image processing, OCR, and Google Sheets.</p>
+          <h4>Unveiling Football's Greatest</h4>
+          <p>Python-powered analysis of top footballers' goals and assists per game ratio.</p>
           <div class="btn-container">
-            <a href="https://johnathanfaria.blogspot.com/p/tennis-odds-extraction-from-bet-365.html" target="_blank" class="btn btn-primary">Read More</a>
-            <a href="https://github.com/johnathanfaria/tennis-odds-collection" target="_blank" class="btn btn-secondary">View Code on GitHub</a>
+            <a href="https://johnathanfaria.blogspot.com/p/unveiling-data-behind-footballs.html" target="_blank" class="btn btn-primary">Read More</a>
+            <a href="https://github.com/johnathanfaria/football" target="_blank" class="btn btn-secondary">View Code on GitHub</a>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- Bootstrap JS and jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script>
+    function filterProjects(category) {
+      const projects = document.querySelectorAll('.project-card');
+      projects.forEach(project => {
+        if (category === 'all') {
+          project.style.display = 'block';
+        } else {
+          project.classList.contains(category) 
+            ? project.style.display = 'block' 
+            : project.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+  <!-- Bootstrap JS -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
