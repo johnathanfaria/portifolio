@@ -1,131 +1,156 @@
-<section class="contact-section">
-  <h2>Contact Me</h2>
-  <div class="contact-grid">
-    <!-- Contact Method: Email -->
-    <div class="contact-card">
-      <img src="images/email_icon.jpg" alt="Email Icon">
-      <div class="card-body">
-        <h4>Email</h4>
-        <p>You can reach me at: <a href="mailto:fariajohnathan@gmail.com">fariajohnathan@gmail.com</a></p>
-      </div>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Basic Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7f6;
+    }
 
-    <!-- Contact Method: Phone -->
-    <div class="contact-card">
-      <img src="images/phone_icon.jpg" alt="Phone Icon">
-      <div class="card-body">
-        <h4>Phone</h4>
-        <p>Feel free to call me at: <a href="tel:+353831170585">+353 83 117 0585</a></p>
-      </div>
-    </div>
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 15px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      margin-bottom: 50px;
+    }
 
-    <!-- Contact Method: LinkedIn -->
-    <div class="contact-card">
-      <img src="images/linkedin_icon.jpg" alt="LinkedIn Icon">
-      <div class="card-body">
-        <h4>LinkedIn</h4>
-        <p>Connect with me on LinkedIn: <a href="https://www.linkedin.com/in/johnathanfaria" target="_blank">LinkedIn Profile</a></p>
-      </div>
+    .nav-links li {
+      margin: 0 15px;
+    }
+
+    .nav-links a {
+      font-size: 1.2rem;
+      color: #333;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    /* Contact Section Styles */
+    .contact-section {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .contact-section h2 {
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+
+    .contact-links {
+      margin-bottom: 30px;
+    }
+
+    .contact-links a {
+      font-size: 1.5rem;
+      color: #007bff;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+
+    .contact-links a:hover {
+      text-decoration: underline;
+    }
+
+    .form-group {
+      text-align: left;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+    }
+
+    #formMessage {
+      margin-top: 15px;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <ul class="nav-links">
+    <li><a href="index.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="contact.html">Contact Me</a></li>
+  </ul>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Contact Me</h2>
+
+    <!-- Contact Links -->
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/johnathanfaria" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/johnathanfaria" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
     </div>
 
     <!-- Contact Form -->
-    <div class="contact-card">
-      <div class="card-body">
-        <h4>Get in Touch</h4>
-        <form id="contactForm">
-          <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" class="form-control" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" class="form-control" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea id="message" class="form-control" rows="4" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary mt-3">Send Message</button>
-        </form>
-        <p id="formMessage" style="margin-top: 15px;"></p>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" class="form-control" required>
       </div>
-    </div>
-  </div>
-</section>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" class="form-control" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">Send Message</button>
+    </form>
+    <p id="formMessage"></p>
+  </section>
 
-<!-- JavaScript to Handle Form Submission -->
-<script>
-  document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+  <!-- JavaScript to Handle Form Submission -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
 
-    // Example for now to just display a successful message
-    document.getElementById('formMessage').innerText = "Thank you, " + name + "! Your message has been sent successfully.";
+      // Example for now to just display a successful message
+      document.getElementById('formMessage').innerText = "Thank you, " + name + "! Your message has been sent successfully.";
 
-    // Here you can add a request to an email service or backend server to process the form
-  });
-</script>
+      // Here you can add a request to an email service or backend server to process the form
+    });
+  </script>
 
-<style>
-  /* Contact Section Styles */
-  .contact-section {
-    text-align: center;
-    padding: 50px 0;
-    background-color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  }
-
-  .contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 0 50px;
-  }
-
-  .contact-card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  }
-
-  .contact-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.2);
-  }
-
-  .contact-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-  }
-
-  .contact-card .card-body {
-    padding: 20px;
-    text-align: left;
-  }
-
-  .contact-card h4 {
-    font-size: 1.5rem;
-    color: #007bff;
-    margin-bottom: 15px;
-  }
-
-  .contact-card p {
-    font-size: 1rem;
-    color: #555;
-  }
-
-  .contact-card a {
-    color: #007bff;
-    text-decoration: none;
-  }
-
-  .contact-card a:hover {
-    text-decoration: underline;
-  }
-</style>
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
