@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skills - Filtered View</title>
+  <title>My Skills</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
@@ -44,53 +44,74 @@
     /* Skills Section */
     .skills-section {
       text-align: center;
-      padding: 50px 0;
+      padding: 50px 20px;
       background-color: #ffffff;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      max-width: 1000px;
+      margin: auto;
     }
 
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    .skills-section h2 {
+      color: #007bff;
+      margin-bottom: 30px;
+    }
+
+    .skill-timeline {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 30px;
-      padding: 0 50px;
     }
 
-    .skill-card {
+    .skill-item {
       background-color: #ffffff;
       border: 1px solid #ddd;
       border-radius: 10px;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 20px;
+      width: 300px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .skill-card:hover {
+    .skill-item:hover {
       transform: translateY(-10px);
       box-shadow: 0 6px 20px rgba(0, 123, 255, 0.2);
     }
 
-    .skill-card img {
+    .skill-circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 10px solid #ddd;
+      margin: 0 auto 20px auto;
+      position: relative;
+      background: conic-gradient(#007bff calc(var(--progress) * 1%), #ddd 0%);
+    }
+
+    .skill-circle::after {
+      content: attr(data-progress) "%";
+      position: absolute;
       width: 100%;
-      height: 200px;
-      object-fit: cover;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: bold;
     }
 
-    .skill-card .card-body {
-      padding: 20px;
-      text-align: left;
-    }
-
-    .skill-card h4 {
+    .skill-name {
       font-size: 1.5rem;
       color: #007bff;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
-    .skill-card p {
-      font-size: 1rem;
+    .skill-description {
+      text-align: left;
+      font-size: 0.9rem;
       color: #555;
-      margin-bottom: 20px;
     }
   </style>
 </head>
@@ -104,62 +125,47 @@
     <li><a href="contact.html">Contact Me</a></li>
   </ul>
 
+  <!-- Skills Section -->
   <section class="skills-section">
-    <h2>My Skills</h2>
-    <div class="skills-grid">
-      <!-- Skill: SQL -->
-      <div class="skill-card">
-        <img src="images/skills_sql.jpg" alt="SQL Skill">
-        <div class="card-body">
-          <h4>SQL</h4>
-          <p>Proficient in SQL for querying databases, performing data manipulation, and managing large datasets efficiently.</p>
+    <h2>My Skills Journey</h2>
+    <div class="skill-timeline">
+
+      <!-- Skill Item: Excel -->
+      <div class="skill-item">
+        <div class="skill-circle" style="--progress: 95;" data-progress="95"></div>
+        <div class="skill-name">Excel</div>
+        <div class="skill-description">
+          <p>Started learning in 2008 during childhood. Mastered advanced features in 2020, including VBA and VLOOKUP. Applied Excel in a data analysis context in every project since 2021.</p>
         </div>
       </div>
 
-      <!-- Skill: Python -->
-      <div class="skill-card">
-        <img src="images/skills_python.jpg" alt="Python Skill">
-        <div class="card-body">
-          <h4>Python</h4>
-          <p>Experienced in Python programming for data analysis, machine learning, and automation using popular libraries like Pandas and NumPy.</p>
+      <!-- Skill Item: Python -->
+      <div class="skill-item">
+        <div class="skill-circle" style="--progress: 80;" data-progress="80"></div>
+        <div class="skill-name">Python</div>
+        <div class="skill-description">
+          <p>Began learning Python in 2017 during college for engineering. Gained experience with data manipulation libraries and have been using Python professionally since 2020.</p>
         </div>
       </div>
 
-      <!-- Skill: Tableau -->
-      <div class="skill-card">
-        <img src="images/skills_tableau.jpg" alt="Tableau Skill">
-        <div class="card-body">
-          <h4>Tableau</h4>
-          <p>Expert in using Tableau for creating interactive dashboards and data visualizations to effectively communicate insights.</p>
+      <!-- Skill Item: SQL -->
+      <div class="skill-item">
+        <div class="skill-circle" style="--progress: 85;" data-progress="85"></div>
+        <div class="skill-name">SQL</div>
+        <div class="skill-description">
+          <p>First contact in 2020. Quickly developed proficiency, applying SQL for large datasets in professional and personal projects.</p>
         </div>
       </div>
 
-      <!-- Skill: Power BI -->
-      <div class="skill-card">
-        <img src="images/skills_powerbi.jpg" alt="Power BI Skill">
-        <div class="card-body">
-          <h4>Power BI</h4>
-          <p>Proficient in Power BI to develop and publish interactive reports and dashboards to assist in data-driven decision-making.</p>
+      <!-- Skill Item: Tableau -->
+      <div class="skill-item">
+        <div class="skill-circle" style="--progress: 75;" data-progress="75"></div>
+        <div class="skill-name">Tableau</div>
+        <div class="skill-description">
+          <p>Started using Tableau in 2022 to create dashboards, including projects for logistic truck companies.</p>
         </div>
       </div>
 
-      <!-- Skill: Advanced Stats -->
-      <div class="skill-card">
-        <img src="images/skills_advanced_stats.jpg" alt="Advanced Stats Skill">
-        <div class="card-body">
-          <h4>Advanced Stats</h4>
-          <p>Experience with advanced statistical methods and tools for deriving actionable insights from complex datasets.</p>
-        </div>
-      </div>
-
-      <!-- Skill: Stakeholder Communication -->
-      <div class="skill-card">
-        <img src="images/skills_communication.jpg" alt="Stakeholder Communication Skill">
-        <div class="card-body">
-          <h4>Stakeholder Communication</h4>
-          <p>Strong ability to communicate data findings effectively with stakeholders at different levels of technical proficiency.</p>
-        </div>
-      </div>
     </div>
   </section>
 
