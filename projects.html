@@ -106,8 +106,12 @@
       margin-bottom: 20px;
     }
 
-    .project-card .btn-primary {
-      background-color: #007bff;
+    .project-card .btn-container {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-primary, .btn-secondary {
       color: white;
       border: none;
       padding: 10px 20px;
@@ -116,8 +120,20 @@
       transition: background-color 0.3s ease;
     }
 
-    .project-card .btn-primary:hover {
+    .btn-primary {
+      background-color: #007bff;
+    }
+
+    .btn-primary:hover {
       background-color: #0056b3;
+    }
+
+    .btn-secondary {
+      background-color: #28a745;
+    }
+
+    .btn-secondary:hover {
+      background-color: #218838;
     }
 
     /* Responsive Design */
@@ -150,7 +166,10 @@
         <div class="card-body">
           <h4>NBA Champions' DNA Analysis</h4>
           <p>This project analyzes NBA championship teams' statistical performance and identifies common traits among winning teams and standout players.</p>
-          <a href="https://johnathanfaria.blogspot.com/p/nba-champions-dna-analysis.html" target="_blank" class="btn btn-primary">Read More</a>
+          <div class="btn-container">
+            <a href="https://johnathanfaria.blogspot.com/p/nba-champions-dna-analysis.html" target="_blank" class="btn btn-primary">Read More</a>
+            <a href="https://github.com/johnathanfaria/nba-dna-analysis" target="_blank" class="btn btn-secondary">View Code on GitHub</a>
+          </div>
         </div>
       </div>
 
@@ -160,7 +179,10 @@
         <div class="card-body">
           <h4>Bayesian State Estimation in Biochemical Processes</h4>
           <p>Evaluated Bayesian state estimators, optimizing biochemical processes with a 30-fold increase in accuracy.</p>
-          <a href="https://johnathanfaria.blogspot.com/p/from-data-to-insights-enhancing.html" target="_blank" class="btn btn-primary">Read More</a>
+          <div class="btn-container">
+            <a href="https://johnathanfaria.blogspot.com/p/from-data-to-insights-enhancing.html" target="_blank" class="btn btn-primary">Read More</a>
+            <a href="https://github.com/johnathanfaria/biochemical-processes-estimation" target="_blank" class="btn btn-secondary">View Code on GitHub</a>
+          </div>
         </div>
       </div>
 
@@ -170,7 +192,10 @@
         <div class="card-body">
           <h4>Automating Tennis Odds Collection</h4>
           <p>A project that automates tennis betting odds extraction using image processing, OCR, and Google Sheets.</p>
-          <a href="https://johnathanfaria.blogspot.com/p/tennis-odds-extraction-from-bet-365.html" target="_blank" class="btn btn-primary">Read More</a>
+          <div class="btn-container">
+            <a href="https://johnathanfaria.blogspot.com/p/tennis-odds-extraction-from-bet-365.html" target="_blank" class="btn btn-primary">Read More</a>
+            <a href="https://github.com/johnathanfaria/tennis-odds-collection" target="_blank" class="btn btn-secondary">View Code on GitHub</a>
+          </div>
         </div>
       </div>
     </div>
