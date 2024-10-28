@@ -113,13 +113,16 @@
       position: absolute;
     }
 
-    /* Skill Level Indicators */
-    .skill-levels {
+    .skill-level-indicator {
+      position: absolute;
+      right: 10px;
+      top: 0;
+      height: 100%;
       display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: #555;
-      margin-top: 5px;
+      align-items: center;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -147,9 +150,7 @@
         </div>
         <div class="skill-bar">
           <div class="skill-bar-fill" style="width: 95%;"></div>
-        </div>
-        <div class="skill-levels">
-          <span>Elementary</span><span>Beginner</span><span>Intermediate</span><span>Upper-Intermediate</span><span>Advanced</span>
+          <div class="skill-level-indicator">Advanced</div>
         </div>
       </div>
 
@@ -162,9 +163,7 @@
         </div>
         <div class="skill-bar">
           <div class="skill-bar-fill" style="width: 80%;"></div>
-        </div>
-        <div class="skill-levels">
-          <span>Elementary</span><span>Beginner</span><span>Intermediate</span><span>Upper-Intermediate</span><span>Advanced</span>
+          <div class="skill-level-indicator">Upper-Intermediate</div>
         </div>
       </div>
 
@@ -177,9 +176,7 @@
         </div>
         <div class="skill-bar">
           <div class="skill-bar-fill" style="width: 85%;"></div>
-        </div>
-        <div class="skill-levels">
-          <span>Elementary</span><span>Beginner</span><span>Intermediate</span><span>Upper-Intermediate</span><span>Advanced</span>
+          <div class="skill-level-indicator">Advanced</div>
         </div>
       </div>
 
@@ -188,13 +185,37 @@
         <img src="images/tableau.png" alt="Tableau Icon" class="skill-icon">
         <div class="skill-name">Tableau</div>
         <div class="skill-description">
-          <p>Started using Tableau in 2022 to create dashboards, including projects for logistic truck companies.</p>
+          <p>Started using Tableau in 2022 to create dashboards, including projects for logistic truck companies and for some freelance gigs.</p>
         </div>
         <div class="skill-bar">
           <div class="skill-bar-fill" style="width: 75%;"></div>
+          <div class="skill-level-indicator">Upper-Intermediate</div>
         </div>
-        <div class="skill-levels">
-          <span>Elementary</span><span>Beginner</span><span>Intermediate</span><span>Upper-Intermediate</span><span>Advanced</span>
+      </div>
+
+      <!-- Skill Item: Power BI -->
+      <div class="skill-item">
+        <img src="images/powerbi.png" alt="Power BI Icon" class="skill-icon">
+        <div class="skill-name">Power BI</div>
+        <div class="skill-description">
+          <p>Started using in 2022 and due to its similarity with Excel, I could manage it easily, using it daily in my first data analysis job in Ireland and developing outstanding projects without trouble.</p>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width: 70%;"></div>
+          <div class="skill-level-indicator">Upper-Intermediate</div>
+        </div>
+      </div>
+
+      <!-- Skill Item: Advanced Stats -->
+      <div class="skill-item">
+        <img src="images/advanced_stats.png" alt="Advanced Stats Icon" class="skill-icon">
+        <div class="skill-name">Advanced Stats</div>
+        <div class="skill-description">
+          <p>Started using stats since high school classes in 2012 and mastered it during thesis confection in 2020 where I applied advanced stats like Bayesian statistics and State estimators to simulate a biochemical process. The same project involved concepts like Kalman filters, regression, optimization, and error bars applied to PDE models.</p>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width: 85%;"></div>
+          <div class="skill-level-indicator">Advanced</div>
         </div>
       </div>
 
