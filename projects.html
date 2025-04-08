@@ -17,7 +17,7 @@
       padding: 0;
       background-color: #f4f7f6;
     }
-
+    
     .nav-links {
       display: flex;
       justify-content: center;
@@ -27,11 +27,11 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
       margin-bottom: 50px;
     }
-
+    
     .nav-links li {
       margin: 0 15px;
     }
-
+    
     .nav-links a {
       font-size: 1.2rem;
       color: #333;
@@ -40,26 +40,27 @@
       border-radius: 5px;
       transition: all 0.3s ease;
     }
-
+    
     /* Filter Section */
     .filter-section {
       text-align: center;
       margin-bottom: 40px;
     }
-
+    
     .filter-title {
       font-size: 1.5rem;
       font-weight: 500;
       margin-bottom: 20px;
       color: #333;
     }
-
+    
     .filter-buttons {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       gap: 15px;
     }
-
+    
     .filter-btn {
       padding: 10px 20px;
       font-size: 1rem;
@@ -71,21 +72,21 @@
       transition: background-color 0.3s ease, transform 0.3s ease;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-
+    
     .filter-btn i {
       margin-right: 8px;
     }
-
+    
     .filter-btn:hover {
       background-color: #0056b3;
       transform: translateY(-2px);
     }
-
+    
     .filter-btn.active {
       background-color: #0056b3;
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
-
+    
     /* Project Cards */
     .projects-section {
       text-align: center;
@@ -93,14 +94,14 @@
       background-color: #ffffff;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
-
+    
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
       padding: 0 50px;
     }
-
+    
     .project-card {
       background-color: #ffffff;
       border: 1px solid #ddd;
@@ -109,35 +110,35 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
-
+    
     .project-card:hover {
       transform: translateY(-10px);
       box-shadow: 0 6px 20px rgba(0, 123, 255, 0.2);
     }
-
+    
     .project-card img {
       width: 100%;
       height: 200px;
       object-fit: cover;
     }
-
+    
     .project-card .card-body {
       padding: 20px;
       text-align: left;
     }
-
+    
     .project-card h4 {
       font-size: 1.5rem;
       color: #007bff;
       margin-bottom: 15px;
     }
-
+    
     .project-card p {
       font-size: 1rem;
       color: #555;
       margin-bottom: 20px;
     }
-
+    
     .project-card .btn-container {
       display: flex;
       gap: 10px;
@@ -158,11 +159,36 @@
   <div class="filter-section">
     <p class="filter-title">Filter Projects By Category</p>
     <div class="filter-buttons">
-      <button class="filter-btn active" onclick="filterProjects('all')"><i class="fas fa-layer-group"></i> Show All</button>
-      <button class="filter-btn" onclick="filterProjects('business')"><i class="fa-solid fa-euro-sign"></i> Business</button>
-      <button class="filter-btn" onclick="filterProjects('sports')"><i class="fa-solid fa-volleyball"></i> Sports</button>
-      <button class="filter-btn" onclick="filterProjects('science')"><i class="fas fa-chart-bar"></i> Science</button>
-      <button class="filter-btn" onclick="filterProjects('well-being')"><i class="fas fa-star-of-life"></i> Well being</button>
+      <button class="filter-btn active" onclick="filterProjects('all')">
+        <i class="fas fa-layer-group"></i> Show All
+      </button>
+      <button class="filter-btn" onclick="filterProjects('sql')">
+        <i class="fas fa-database"></i> SQL
+      </button>
+      <button class="filter-btn" onclick="filterProjects('python')">
+        <i class="fab fa-python"></i> Python
+      </button>
+      <button class="filter-btn" onclick="filterProjects('tableau')">
+        <i class="fas fa-chart-bar"></i> Tableau
+      </button>
+      <button class="filter-btn" onclick="filterProjects('excel')">
+        <i class="fas fa-file-excel"></i> Excel
+      </button>
+      <button class="filter-btn" onclick="filterProjects('matlab')">
+        <i class="fas fa-cogs"></i> Matlab
+      </button>
+      <button class="filter-btn" onclick="filterProjects('powerbi')">
+        <i class="fas fa-chart-pie"></i> PowerBI
+      </button>
+      <button class="filter-btn" onclick="filterProjects('eda')">
+        <i class="fas fa-flask"></i> EDA
+      </button>
+      <button class="filter-btn" onclick="filterProjects('machine learning')">
+        <i class="fas fa-robot"></i> Machine Learning
+      </button>
+      <button class="filter-btn" onclick="filterProjects('advance statistic')">
+        <i class="fas fa-chart-line"></i> Advance Statistic
+      </button>
     </div>
   </div>
 
@@ -170,22 +196,21 @@
   <section class="projects-section">
     <h2>Highlighted Projects</h2>
     <div class="projects-grid">
-      
       <!-- Project 1: NBA Champions' DNA Analysis -->
-      <div class="project-card sports">
-        <img src="images/project_1.jpeg" alt="Project 1">
+      <div class="project-card" data-categories="sql, python, eda, machine learning, tableau">
+        <img src="images/project_1.jpeg" alt="NBA Champions DNA Analysis">
         <div class="card-body">
           <h4>NBA Champions' DNA Analysis</h4>
-          <p>Analysis of NBA championship teams' statistical performance and common traits.</p>
+          <p>Analysis of NBA championship teams' performance using statistical data and visualization.</p>
           <div class="btn-container">
             <a href="NBA.html" target="_blank" class="btn btn-primary">Read More</a>
             <a href="https://github.com/johnathanfaria/NBA-Champions-DNA" target="_blank" class="btn btn-secondary">View Code on GitHub</a>
           </div>
         </div>
       </div>
-
-      <!-- Project 2: Top Nations Lead in Work-Life Harmony -->
-      <div class="project-card well-being">
+      
+      <!-- Project 2: Top Nations in Work-Life Harmony -->
+      <div class="project-card" data-categories="python, excel">
         <img src="images/work-life-bal.png" alt="Work-Life Balance">
         <div class="card-body">
           <h4>Top Nations in Work-Life Harmony</h4>
@@ -196,22 +221,22 @@
           </div>
         </div>
       </div>
-
+      
       <!-- Project 3: Bayesian State Estimation in Biochemical Processes -->
-      <div class="project-card science">
+      <div class="project-card" data-categories="python, excel, matlab, machine learning, advance statistic">
         <img src="images/thesis.jpg" alt="Biochemical Process">
         <div class="card-body">
           <h4>Bayesian State Estimation in Biochemical Processes</h4>
-          <p>Evaluated Bayesian estimators for biochemical process optimization.</p>
+          <p>Evaluating Bayesian estimators for biochemical process optimization.</p>
           <div class="btn-container">
             <a href="https://johnathanfaria.blogspot.com/p/from-data-to-insights-enhancing.html" target="_blank" class="btn btn-primary">Read More</a>
             <a href="https://github.com/johnathanfaria/biochemical-processes-estimation" target="_blank" class="btn btn-secondary">View Code on GitHub</a>
           </div>
         </div>
       </div>
-
-      <!-- Project 4: Unveiling the Data Behind Football's Greatest -->
-      <div class="project-card sports">
+      
+      <!-- Project 4: Unveiling Football's Greatest -->
+      <div class="project-card" data-categories="python, excel, powerbi">
         <img src="images/footbal.png" alt="Football Analysis">
         <div class="card-body">
           <h4>Unveiling Football's Greatest</h4>
@@ -222,35 +247,32 @@
           </div>
         </div>
       </div>
-
-            <!-- Project 5 EDA CHurn ANALYSIS -->
-      <div class="project-card EDA">
-        <img src="images/heatmap.png" alt="Football Analysis">
+      
+      <!-- Project 5: Churn Analysis using EDA -->
+      <div class="project-card" data-categories="python, eda">
+        <img src="images/heatmap.png" alt="Churn Analysis">
         <div class="card-body">
           <h4>Churn Analysis using EDA</h4>
-          <p>Exploratory DATA ANALYSIS for churn in a telephone company.</p>
+          <p>Exploratory Data Analysis for churn in a telephone company.</p>
           <div class="btn-container">
             <a href="Churn Analysis.html" target="_blank" class="btn btn-primary">Read More</a>
-            <a href="https://github.com/johnathanfaria target="_blank" class="btn btn-secondary">View Code on GitHub</a>
+            <a href="https://github.com/johnathanfaria" target="_blank" class="btn btn-secondary">View Code on GitHub</a>
           </div>
         </div>
       </div>
-
       
-
       <!-- Project 6: Automating Tennis Odds Collection -->
-      <div class="project-card sports">
+      <div class="project-card" data-categories="python, machine learning, advance statistic">
         <img src="images/tennis.jpg" alt="Tennis Odds Collection">
         <div class="card-body">
           <h4>Automating Tennis Odds Collection</h4>
-          <p>A project that automates tennis betting odds extraction using image processing, OCR, and Google Sheets.</p>
+          <p>Automated extraction of tennis betting odds using image processing, OCR, and Google Sheets.</p>
           <div class="btn-container">
             <a href="https://johnathanfaria.blogspot.com/p/tennis-odds-extraction-from-bet-365.html" target="_blank" class="btn btn-primary">Read More</a>
             <a href="https://github.com/johnathanfaria/tennis" target="_blank" class="btn btn-secondary">View Code on GitHub</a>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -258,19 +280,27 @@
     function filterProjects(category) {
       const projects = document.querySelectorAll('.project-card');
       const filterBtns = document.querySelectorAll('.filter-btn');
-
+      
       // Update active button styling
       filterBtns.forEach(btn => btn.classList.remove('active'));
       event.target.classList.add('active');
-
-      // Filter projects
+      
+      // Filter projects based on the data-categories attribute
       projects.forEach(project => {
         if (category === 'all') {
           project.style.display = 'block';
         } else {
-          project.classList.contains(category) 
-            ? project.style.display = 'block' 
-            : project.style.display = 'none';
+          const categoriesAttr = project.getAttribute('data-categories');
+          if (categoriesAttr) {
+            const categories = categoriesAttr.split(',').map(cat => cat.trim().toLowerCase());
+            if (categories.indexOf(category) !== -1) {
+              project.style.display = 'block';
+            } else {
+              project.style.display = 'none';
+            }
+          } else {
+            project.style.display = 'none';
+          }
         }
       });
     }
