@@ -46,10 +46,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 50px 20px;
+      padding: 50px 0;
       background-color: #ffffff;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-      flex-wrap: wrap;
     }
 
     .profile-image {
@@ -59,7 +58,6 @@
       overflow: hidden;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       margin-right: 40px;
-      margin-bottom: 30px;
     }
 
     .profile-image img {
@@ -85,27 +83,20 @@
     }
 
     .key-projects {
-      margin-top: 40px;
+      margin-top: 30px;
     }
 
-    .key-projects h3 {
-      font-size: 1.75rem;
-      margin-bottom: 30px;
-      color: #333;
-    }
-
-    .card {
-      border: none;
+    .achievement-box {
+      border: 1px solid #ddd;
       border-radius: 10px;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      background-color: #f1f1f1;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
 
-    .card-body {
-      padding: 20px;
-    }
-
-    .card-text {
-      font-size: 1rem;
-      color: #444;
+    .achievement-box strong {
+      color: #007bff;
     }
 
     @media (max-width: 768px) {
@@ -116,6 +107,7 @@
 
       .profile-image {
         margin-right: 0;
+        margin-bottom: 30px;
       }
 
       .summary h2 {
@@ -153,29 +145,15 @@
       <p>I excel in communicating with senior leadership and adapting reports to evolving business requirements at the intersection of business and technology. I help businesses leverage data to enhance operational efficiency, ensure data quality, and achieve strategic goals through advanced analytics and visualisation techniques.</p>
 
       <div class="key-projects">
-        <h3>Key Achievements</h3>
-        <div class="row">
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <p class="card-text"><strong>Optimised Supply Chain:</strong> Achieved a €50,000/year cost reduction by standardising data processes and implementing process improvements.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <p class="card-text"><strong>Enhanced Financial Outcomes:</strong> Delivered a €15,000/year salary increase by transforming large datasets through targeted SQL data manipulation.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <p class="card-text"><strong>Accelerated Client Acquisition:</strong> Secured 51 new clients in 8 weeks by designing and optimising complex Tableau dashboards.</p>
-              </div>
-            </div>
-          </div>
+        <strong>Key Achievements:</strong>
+        <div class="achievement-box">
+          <p><strong>Optimised Supply Chain:</strong> Achieved a €50,000/year cost reduction by standardising data processes and implementing process improvements.</p>
+        </div>
+        <div class="achievement-box">
+          <p><strong>Enhanced Financial Outcomes:</strong> Delivered a €15,000/year salary increase by transforming large datasets through targeted SQL data manipulation.</p>
+        </div>
+        <div class="achievement-box">
+          <p><strong>Accelerated Client Acquisition:</strong> Secured 51 new clients in 8 weeks by designing and optimising complex Tableau dashboards.</p>
         </div>
       </div>
 
