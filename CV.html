@@ -4,11 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Download My CV</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <!-- Bootstrap CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     body {
@@ -17,42 +13,59 @@
       margin: 0;
       padding: 0;
     }
+    /* NAVBAR (portfolio style) */
+    .navbar-custom {
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      padding: 0;
+    }
     .nav-links {
       display: flex;
       justify-content: center;
+      align-items: center;
       list-style: none;
-      padding: 15px;
-      background-color: #ffffff;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      margin-bottom: 50px;
-    }
-    .nav-links li {
-      margin: 0 15px;
+      margin: 0;
+      padding: 0;
+      height: 70px;
+      gap: 40px;
     }
     .nav-links a {
-      font-size: 1.2rem;
-      color: #333;
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: #223;
+      padding: 10px 18px;
       text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      transition: all 0.3s ease;
+      border-radius: 6px;
+      transition: color 0.2s, border-bottom 0.2s;
+      border-bottom: 2.5px solid transparent;
+      letter-spacing: 0.5px;
     }
-    .nav-links a:hover {
-      background-color: #eee;
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #1e67b7;
+      border-bottom: 2.5px solid #1e67b7;
+      background: #f3f7fc;
     }
     /* CV Download Section */
     .cv-section {
       text-align: center;
-      padding: 50px 20px;
+      padding: 100px 20px 50px 20px; /* Top padding for navbar */
       background-color: #ffffff;
       max-width: 800px;
-      margin: 50px auto;
+      margin: 60px auto 0 auto;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
     .cv-section h2 {
-      color: #007bff;
+      color: #1e67b7;
       margin-bottom: 20px;
+      font-weight: 800;
+      font-size: 2rem;
     }
     .cv-section p {
       font-size: 1rem;
@@ -73,17 +86,29 @@
       background-color: #0056b3;
       transform: translateY(-2px);
     }
+    @media (max-width: 650px) {
+      .nav-links {
+        gap: 16px;
+      }
+      .cv-section {
+        padding: 90px 4px 30px 4px;
+        margin-top: 50px;
+      }
+      .cv-section h2 { font-size: 1.15rem;}
+    }
   </style>
 </head>
 <body>
   <!-- Navigation Bar -->
-  <ul class="nav-links">
-    <li><a href="index.html">About</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="skills.html">Skills</a></li>
-    <li><a href="contact.html">Contact Me</a></li>
-    <li><a href="cv.html">Download CV</a></li>
-  </ul>
+  <nav class="navbar-custom">
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="CV.html" class="active">Download CV</a></li>
+    </ul>
+  </nav>
 
   <!-- CV Download Section -->
   <section class="cv-section">
@@ -93,8 +118,5 @@
       <i class="fas fa-download"></i> Download CV
     </a>
   </section>
-
-  <!-- Bootstrap JS -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
