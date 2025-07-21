@@ -10,7 +10,7 @@
       font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f6f9fb;
+      background: #f4f7f6;
       color: #1a1a1a;
     }
     /* NAVBAR */
@@ -35,7 +35,7 @@
       gap: 40px;
     }
     .nav-links a {
-      font-size: 1.25rem;
+      font-size: 1.22rem;
       font-weight: 700;
       color: #223;
       padding: 10px 18px;
@@ -51,32 +51,96 @@
       border-bottom: 2.5px solid #1e67b7;
       background: #f3f7fc;
     }
-    /* HIGHLIGHTS SECTION */
-    .highlights-section {
-      background: #f4f7fa;
-      text-align: center;
-      padding: 90px 20px 44px 20px; /* extra top padding for navbar */
+
+    /* HERO SECTION */
+    .hero-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url('images/bg.png');
+      background-size: cover;
+      background-position: center;
+      color: #000;
+      text-align: left;
+      padding: 110px 20px 50px 20px; /* Top padding for navbar */
+      height: auto;
       border-bottom: 1px solid #e0e0e0;
     }
-    .highlights-section h2 {
-      font-size: 2.2rem;
+    .hero-content {
+      display: flex;
+      align-items: center;
+      text-align: left;
+      gap: 36px;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 1100px;
+    }
+    .profile-image {
+      width: 330px;
+      height: 330px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+      background: #f4f7fa;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .profile-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-text {
+      max-width: 600px;
+    }
+    .hero-title {
+      font-size: 2.6rem;
       font-weight: 800;
-      margin-bottom: 38px;
+      margin-bottom: 12px;
       color: #1e67b7;
       letter-spacing: 1px;
     }
-    .highlights-grid {
+    .catchphrase {
+      font-size: 1.4rem;
+      color: #222;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+    .about-me {
+      font-size: 1.12rem;
+      color: #232526;
+      line-height: 1.65;
+      margin-bottom: 0;
+    }
+    /* HIGHLIGHTS / ACHIEVEMENTS SECTION */
+    .achievements-section {
+      text-align: center;
+      padding: 44px 20px 30px 20px;
+      background: #fff;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .achievements-section h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 32px;
+      color: #1e67b7;
+      letter-spacing: 1px;
+    }
+    .achievements-grid {
       display: flex;
       gap: 32px;
       justify-content: center;
       flex-wrap: wrap;
+      max-width: 950px;
       margin: 0 auto;
-      max-width: 900px;
     }
-    .highlight-card {
-      background: #fff;
+    .achievement-card {
+      background: #f4f7f6;
       border-radius: 16px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      box-shadow: 0 3px 12px rgba(0,0,0,0.09);
       padding: 32px 26px 24px 26px;
       min-width: 220px;
       max-width: 290px;
@@ -87,116 +151,48 @@
       flex-direction: column;
       align-items: center;
     }
-    .highlight-card:hover {
-      box-shadow: 0 6px 22px rgba(30,103,183,0.12);
+    .achievement-card:hover {
+      box-shadow: 0 6px 22px rgba(30,103,183,0.14);
     }
-    .highlight-num {
-      font-size: 2.1rem;
-      font-weight: 800;
-      color: #1e67b7;
-      margin-bottom: 8px;
-      letter-spacing: 1px;
-    }
-    .highlight-title {
-      font-size: 1.2rem;
+    .achievement-card h4 {
+      font-size: 1.13rem;
       font-weight: 700;
+      color: #222;
       margin-bottom: 8px;
-      color: #223;
-      letter-spacing: 0.5px;
+      margin-top: 0;
     }
-    .highlight-desc {
-      font-size: 1.05rem;
+    .achievement-card p {
+      font-size: 1.04rem;
       color: #444;
       margin-bottom: 0;
       line-height: 1.5;
     }
-    /* HERO SECTION */
-    .hero-section {
-      background: #fff;
-      padding: 58px 20px 38px 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-bottom: 1px solid #e0e0e0;
-    }
-    .hero-content {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-      flex-wrap: wrap;
-      width: 100%;
-      max-width: 1100px;
-    }
-    .profile-image {
-      flex: 1 1 210px;
-      max-width: 240px;
-      aspect-ratio: 1/1;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 5px solid #e6eef7;
-      box-shadow: 0 3px 9px rgba(30,103,183,0.07);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 120px;
-      background: #f4f7fa;
-    }
-    .profile-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .hero-text {
-      flex: 2 1 350px;
-      max-width: 600px;
-      min-width: 220px;
-    }
-    .hero-title {
-      font-size: 2.3rem;
-      font-weight: 800;
-      margin-bottom: 8px;
-      color: #1e67b7;
-      letter-spacing: 1px;
-    }
-    .catchphrase {
-      font-size: 1.3rem;
-      color: #333;
-      margin-bottom: 16px;
-      font-weight: 600;
-    }
-    .about-me {
-      font-size: 1.09rem;
-      color: #242526;
-      line-height: 1.62;
-      margin-bottom: 0;
-    }
-    /* SECTION SPACING ON MOBILE */
+
     @media (max-width: 900px) {
-      .highlights-grid {
-        flex-direction: column;
-        gap: 22px;
-      }
       .hero-content {
         flex-direction: column;
         gap: 26px;
         align-items: flex-start;
       }
       .profile-image {
-        max-width: 170px;
-        margin-bottom: 12px;
+        width: 190px;
+        height: 190px;
       }
-      .hero-section {
-        padding: 38px 10px 26px 10px;
+      .achievements-grid {
+        flex-direction: column;
+        gap: 22px;
       }
-      .highlights-section {
-        padding: 80px 8px 26px 8px;
+      .achievements-section h2 {
+        font-size: 1.25rem;
       }
     }
     @media (max-width: 500px) {
-      .hero-title { font-size: 1.25rem; }
+      .hero-title { font-size: 1.2rem; }
       .catchphrase { font-size: 1rem; }
-      .highlights-section h2 { font-size: 1.1rem; }
-      .highlight-title, .highlight-num { font-size: 1rem; }
+      .achievement-card h4 { font-size: 1rem; }
+      .achievement-card p { font-size: 0.97rem; }
+      .about-me { font-size: 1rem; }
+      .nav-links a { font-size: 1rem; padding: 7px 8px;}
     }
   </style>
 </head>
@@ -212,29 +208,7 @@
     </ul>
   </nav>
 
-  <!-- CAREER HIGHLIGHTS / ACHIEVEMENTS SECTION -->
-  <section class="highlights-section">
-    <h2>Career Highlights</h2>
-    <div class="highlights-grid">
-      <div class="highlight-card">
-        <div class="highlight-num">€50K/year</div>
-        <div class="highlight-title">Supply Chain Savings</div>
-        <div class="highlight-desc">Rebuilt 100K+ row logistics dataset and delivered Power BI dashboards for a US fleet company.</div>
-      </div>
-      <div class="highlight-card">
-        <div class="highlight-num">51 Clients</div>
-        <div class="highlight-title">Rapid Acquisition</div>
-        <div class="highlight-desc">Lead scoring model & data-driven outreach dashboards for a Canadian agency in just 8 weeks.</div>
-      </div>
-      <div class="highlight-card">
-        <div class="highlight-num">$15K+</div>
-        <div class="highlight-title">Academic Impact</div>
-        <div class="highlight-desc">KPI dashboard for NYU professor, resulting in a $15,000 salary increase.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HERO / ABOUT SECTION -->
+  <!-- HERO SECTION -->
   <section class="hero-section">
     <div class="hero-content">
       <div class="profile-image">
@@ -249,6 +223,25 @@
           <p>Expert in Python, SQL, Power BI, Tableau, Excel, EDA, ETL, ELT, Artificial Intelligence, and Machine-learning models.</p>
           <p>Holds a BSc in Engineering and a Postgraduate Degree in Bayesian Statistics focused on Data Analysis; currently completing a Diploma in Data Analytics & Machine Learning at UCD.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREER HIGHLIGHTS / ACHIEVEMENTS SECTION -->
+  <section class="achievements-section">
+    <h2>Career Highlights</h2>
+    <div class="achievements-grid">
+      <div class="achievement-card">
+        <h4>Optimised Supply Chain</h4>
+        <p>Delivered €50K/year in cost savings by rebuilding a 5-year logistics dataset (100K+ rows) and developing Power BI dashboards for a U.S.-based fleet company.</p>
+      </div>
+      <div class="achievement-card">
+        <h4>Data-Driven Solutions</h4>
+        <p>Enabled a $15,000 salary increase for a PhD professor at NYU by uncovering performance insights through student evaluation analysis and KPI-aligned dashboards.</p>
+      </div>
+      <div class="achievement-card">
+        <h4>Accelerated Client Acquisition</h4>
+        <p>Acquired 51 new clients in 8 weeks for a Canadian marketing agency by developing a lead scoring model and deploying data-driven outreach dashboards.</p>
       </div>
     </div>
   </section>
