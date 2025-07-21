@@ -13,7 +13,6 @@
       padding: 0;
       background-color: #f4f7f6;
     }
-    /* NAVBAR (consistent with About page) */
     .navbar-custom {
       width: 100%;
       background: #fff;
@@ -51,12 +50,10 @@
       border-bottom: 2.5px solid #1e67b7;
       background: #f3f7fc;
     }
-
-    /* SECTION: Intro */
     .projects-intro-section {
       background: #f4f7f6;
       text-align: center;
-      padding-top: 105px; /* For navbar */
+      padding-top: 105px;
       padding-bottom: 12px;
     }
     .projects-intro-section h2 {
@@ -71,8 +68,6 @@
       font-size: 1.13rem;
       margin-bottom: 0;
     }
-
-    /* SECTION: Filter */
     .filter-section {
       background: #fff;
       text-align: center;
@@ -112,8 +107,6 @@
       background-color: #0056b3;
       transform: translateY(-2px) scale(1.04);
     }
-
-    /* SECTION: Projects */
     .projects-section {
       text-align: center;
       padding: 48px 0 40px 0;
@@ -208,7 +201,24 @@
       background: #ddeafc;
       color: #0056b3;
     }
-
+    .skill-tags {
+      margin-top: 10px;
+      font-size: 0.99rem;
+    }
+    .skill-tags span {
+      border-radius: 4px;
+      padding: 2px 9px;
+      margin-right: 4px;
+      display: inline-block;
+      font-weight: 600;
+      font-size: 0.96em;
+    }
+    .tag-excel { background:#eaf6f3; color:#17864d; }
+    .tag-eda { background:#f3f7fc; color:#006dbb; }
+    .tag-python { background:#f6eaff; color:#7220ab; }
+    .tag-data-cleaning { background:#fff0e5; color:#a44c00; }
+    .tag-stakeholder { background:#fffbe7; color:#9c8500; }
+    .tag-visualization { background:#e4f4fd; color:#1e67b7; }
     @media (max-width: 900px) {
       .projects-grid {
         grid-template-columns: 1fr;
@@ -292,6 +302,34 @@
   <section class="projects-section">
     <h2>Projects</h2>
     <div class="projects-grid">
+
+      <!-- NYU Faculty Promotion Project: FIRST CARD -->
+      <div class="project-card" data-categories="excel, eda, python, data cleaning, stakeholder management, visualization">
+        <img src="uny project/average student evaluation by year 2018-2024.png" alt="NYU Faculty Promotion Data Project">
+        <div class="card-body">
+          <h4>NYU Faculty Promotion: Data Analytics & Visualization ($15K Raise)</h4>
+          <p>
+            End-to-end data analytics for an NYU faculty member’s promotion, including advanced data cleaning, EDA, custom Excel dashboards, and stakeholder-driven reporting.  
+            <br>
+            Delivered actionable insights from messy, incomplete datasets—directly contributing to a successful promotion and a $15,000 raise.
+          </p>
+          <div class="btn-container">
+            <a href="uny project/project.html" class="btn btn-primary" target="_blank">Read More</a>
+            <a href="https://github.com/johnathanfaria/portifolio/tree/main/uny%20project" class="btn btn-secondary" target="_blank">
+              <i class="fab fa-github"></i> View Code on GitHub
+            </a>
+          </div>
+          <div class="skill-tags">
+            <span class="tag-excel">Excel</span>
+            <span class="tag-eda">EDA</span>
+            <span class="tag-python">Python</span>
+            <span class="tag-data-cleaning">Data Cleaning</span>
+            <span class="tag-stakeholder">Stakeholder Mgmt</span>
+            <span class="tag-visualization">Visualization</span>
+          </div>
+        </div>
+      </div>
+
       <!-- Project 1: NBA Champions' DNA Analysis -->
       <div class="project-card" data-categories="sql, python, eda, machine learning, tableau">
         <img src="images/project_1.jpeg" alt="NBA Champions DNA Analysis">
@@ -371,10 +409,8 @@
     function filterProjects(category, event) {
       const projects = document.querySelectorAll('.project-card');
       const filterBtns = document.querySelectorAll('.filter-btn');
-      // Update active button styling
       filterBtns.forEach(btn => btn.classList.remove('active'));
       if (event) event.target.classList.add('active');
-      // Filter projects based on the data-categories attribute
       projects.forEach(project => {
         if (category === 'all') {
           project.style.display = 'block';
