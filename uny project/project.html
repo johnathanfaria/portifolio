@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NYU Faculty Promotion: Data Analysis & Visualization Drives $15K Raise</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Roboto', sans-serif; margin: 0; background: #f4f7f6; color: #222; }
+    .navbar-custom {
+      width: 100%; background: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      position: fixed; top: 0; left: 0; z-index: 1000; padding: 0;
+    }
+    .nav-links {
+      display: flex; justify-content: center; align-items: center;
+      list-style: none; margin: 0; padding: 0; height: 70px; gap: 40px;
+    }
+    .nav-links a {
+      font-size: 1.22rem; font-weight: 700; color: #223;
+      padding: 10px 18px; text-decoration: none; border-radius: 6px;
+      transition: color 0.2s, border-bottom 0.2s;
+      border-bottom: 2.5px solid transparent; letter-spacing: 0.5px;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: #1e67b7; border-bottom: 2.5px solid #1e67b7; background: #f3f7fc;
+    }
+    .project-detail-container {
+      max-width: 900px; margin: 110px auto 40px auto; background: #fff;
+      border-radius: 12px; box-shadow: 0 3px 18px rgba(30,103,183,0.07);
+      padding: 38px 28px 36px 28px;
+    }
+    .project-title { font-size: 2.2rem; font-weight: 800; color: #1e67b7; margin-bottom: 10px; }
+    .project-subtitle { font-size: 1.15rem; color: #666; margin-bottom: 22px; }
+    .project-section { margin-bottom: 36px; }
+    .section-title { font-size: 1.18rem; font-weight: 700; color: #1e67b7; margin-bottom: 10px; }
+    .project-img { width: 100%; max-width: 660px; display: block; margin: 16px auto 10px auto; border-radius: 8px; border: 1.5px solid #e0e6ec; background: #f8fafb; }
+    .img-caption { color: #345; font-size: 1rem; margin: 0 0 20px 0; text-align: center; }
+    .impact-box {
+      background: #eaf6f3; color: #006b43; font-weight: 700;
+      padding: 13px 18px; border-radius: 8px; font-size: 1.1rem;
+      margin: 30px 0;
+    }
+    @media (max-width: 600px) {
+      .project-detail-container { padding: 16px 3px; }
+      .nav-links { gap: 10px; }
+      .project-title { font-size: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar-custom">
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="CV.html">Download CV</a></li>
+    </ul>
+  </nav>
+  
+  <div class="project-detail-container">
+    <div class="project-title">NYU Faculty Promotion: Data Analysis & Visualization Drives $15K Raise</div>
+    <div class="project-subtitle">End-to-end data analytics & consulting for a high-stakes academic promotion</div>
+    
+    <div class="project-section">
+      <div class="section-title">Overview</div>
+      <p>
+        As a freelance Data Analyst, I was hired by an NYU instructor preparing her promotion application. My mission: transform six years of fragmented student evaluation data into actionable insights and presentation-ready visuals. Through deep data cleaning, exploratory analytics, and a collaborative, results-driven approach, my work empowered the client to clearly demonstrate her teaching impact—and directly contributed to a successful promotion and a $15,000/year salary increase.
+      </p>
+    </div>
+    
+    <div class="project-section">
+      <div class="section-title">Client Challenge</div>
+      <p>
+        The client brought me raw Excel files spanning 2018–2024, containing student ratings for multiple courses and teaching categories. The datasets had considerable missing values and inconsistencies, especially in response rates and category totals. The key challenge was to distill this noisy data into clear, convincing graphics and tables that would fit within a strict two-page limit for a faculty promotion review board—showcasing excellence and progress, even in challenging years.
+      </p>
+    </div>
+    
+    <div class="project-section">
+      <div class="section-title">How I Delivered Results</div>
+      <ul>
+        <li><b>Advanced Data Cleaning:</b> The original data required significant wrangling—many fields were missing or incomplete, with student ratings not always adding up to 100%. I applied robust data cleaning techniques, managed null values, and engineered logical assumptions (e.g., treating missing responses as “no response”) to standardize the dataset, ensuring all downstream analytics were reliable.</li>
+        <li><b>Exploratory Data Analysis (EDA):</b> Using EDA and statistical summaries, I identified which courses, terms, and teaching dimensions were most favorable. By calculating weighted means, analyzing year-over-year progress, and mapping outliers, I found the most compelling story to tell the review board.</li>
+        <li><b>Stakeholder Collaboration:</b> I held regular check-ins to clarify objectives, define “success” (75%+ in “Excellent/Very Good”), and iterate on visual design. My consultative style ensured the client’s unique achievements stood out—while I proactively managed data limitations and communicated the “why” behind each visual choice.</li>
+        <li><b>Excel Power Tools:</b> Leveraging advanced Excel (Pivot Tables, dynamic charts, error bars), I delivered both high-level overviews and detailed breakdowns. My charts were fully editable, enabling the client to fine-tune colors and styles for her application.</li>
+      </ul>
+    </div>
+    
+    <div class="project-section">
+      <div class="section-title">Key Analytics Insights</div>
+      
+      <img src="uny project/average student evaluation by term 2018-2024.png" class="project-img" alt="Terms evaluation 2018–2024">
+      <div class="img-caption">
+        <b>Term-by-Term Performance:</b> This chart reveals how teaching effectiveness fluctuated across semesters, pinpointing specific terms where ratings approached “Excellent.” The use of error bars highlighted both strong achievements and the consistency of results—helping the promotion committee appreciate positive trends, even when the data was variable.
+      </div>
+      
+      <img src="uny project/average student evaluation by year 2018-2024.png" class="project-img" alt="Students evaluation 2018–2024">
+      <div class="img-caption">
+        <b>Yearly Student Evaluations:</b> This annual summary captures overall satisfaction for each academic year. It allowed stakeholders to quickly identify years of strongest performance and to see the trajectory of student perception—reinforcing a story of ongoing professional growth and adaptability.
+      </div>
+      
+      <img src="uny project/courses evaluation 2018-2024.png" class="project-img" alt="Courses evaluation 2018–2024">
+      <div class="img-caption">
+        <b>Course-by-Course Analysis:</b> By benchmarking mean ratings for all major courses, this visual made it easy to highlight the client’s best classes—spanning both undergraduate and graduate levels. It visually reinforced the breadth of her teaching skills and her ability to excel in diverse academic environments.
+      </div>
+      
+      <img src="uny project/overal assesemnt of the instruction by year.png" class="project-img" alt="Overall assessment of instructor by year">
+      <div class="img-caption">
+        <b>Overall Teaching Impact:</b> This targeted chart isolates the critical “overall assessment of instructor” question, making it easy to identify best-performing years at a glance. Strong performance here was key to demonstrating readiness for promotion.
+      </div>
+      
+      <img src="uny project/students perception of teching survey 2018-2024.png" class="project-img" alt="Students Perception of Teaching Survey">
+      <div class="img-caption">
+        <b>Strengths by Teaching Dimension:</b> This breakdown shows which aspects of instruction—like “Facilitation of learning” and “Respect and concern for students”—stood out most in student evaluations. These insights helped the client spotlight the true value she delivered beyond simple scores.
+      </div>
+      
+      <img src="uny project/average score by question asked 2018-2024.png" class="project-img" alt="Average score by question asked 2018–2024">
+      <div class="img-caption">
+        <b>Longitudinal Survey Insights:</b> This grouped bar chart explores how specific evaluation criteria evolved over time, surfacing both strengths and areas of improvement. It served as proof of sustained commitment to teaching excellence and continuous progress.
+      </div>
+    </div>
+    
+    <div class="impact-box">
+      <strong>Impact & Outcome:</strong> My analytics and data storytelling directly empowered the client to secure her NYU promotion and a <b>$15,000 annual salary raise</b>. This project is a prime example of my ability to transform complex, messy datasets into actionable, real-world results that drive executive decisions.
+    </div>
+    
+    <div class="project-section">
+      <b>Note on Confidentiality:</b><br>
+      To respect client privacy and intellectual property, only selected sample charts are shown here; the final full dashboard and report are not public.
+    </div>
+    
+    <div class="project-section" style="margin-top:24px;">
+      <b>If you’re seeking a results-focused analyst who can convert your data into strategic business impact, let’s connect.</b>
+    </div>
+  </div>
+</body>
+</html>
 
