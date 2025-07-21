@@ -4,96 +4,114 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Me</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <!-- Bootstrap CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
-    /* Basic Styles */
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f4f7f6;
     }
-
+    /* NAVBAR (same as rest of portfolio) */
+    .navbar-custom {
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      padding: 0;
+    }
     .nav-links {
       display: flex;
       justify-content: center;
+      align-items: center;
       list-style: none;
-      padding: 15px;
-      background-color: #ffffff;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      margin-bottom: 50px;
+      margin: 0;
+      padding: 0;
+      height: 70px;
+      gap: 40px;
     }
-
-    .nav-links li {
-      margin: 0 15px;
-    }
-
     .nav-links a {
-      font-size: 1.2rem;
-      color: #333;
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: #223;
+      padding: 10px 18px;
       text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      transition: all 0.3s ease;
+      border-radius: 6px;
+      transition: color 0.2s, border-bottom 0.2s;
+      border-bottom: 2.5px solid transparent;
+      letter-spacing: 0.5px;
     }
-
-    /* Contact Section Styles */
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #1e67b7;
+      border-bottom: 2.5px solid #1e67b7;
+      background: #f3f7fc;
+    }
     .contact-section {
       text-align: center;
-      padding: 50px 20px;
+      padding: 100px 20px 50px 20px; /* top padding to clear navbar */
       background-color: #ffffff;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
       max-width: 800px;
-      margin: auto;
+      margin: 60px auto 0 auto;
+      border-radius: 12px;
     }
-
     .contact-section h2 {
-      color: #007bff;
+      color: #1e67b7;
       margin-bottom: 20px;
+      font-size: 2rem;
+      font-weight: 800;
     }
-
     .contact-links {
       margin-bottom: 30px;
     }
-
     .contact-links a {
       font-size: 1.5rem;
       color: #007bff;
       margin: 0 15px;
       text-decoration: none;
     }
-
     .contact-links a:hover {
       text-decoration: underline;
     }
-
     iframe {
       width: 100%;
       height: 700px;
       border: none;
+      border-radius: 8px;
+      margin-top: 12px;
+    }
+    @media (max-width: 650px) {
+      .nav-links {
+        gap: 16px;
+      }
+      .contact-section {
+        padding: 90px 4px 30px 4px;
+        margin-top: 50px;
+      }
+      .contact-section h2 { font-size: 1.15rem;}
     }
   </style>
 </head>
 <body>
-
   <!-- Navigation Bar -->
-  <ul class="nav-links">
-    <li><a href="index.html">About</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="skills.html">Skills</a></li>
-    <li><a href="contact.html">Contact Me</a></li>
-     <li><a href="CV.html">Download CV</a></li>
-  </ul>
+  <nav class="navbar-custom">
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="CV.html">Download CV</a></li>
+    </ul>
+  </nav>
 
   <!-- Contact Section -->
   <section class="contact-section">
     <h2>Contact Me</h2>
-
-    <!-- Contact Links -->
     <div class="contact-links">
       <a href="https://www.linkedin.com/in/johnathanfaria" target="_blank">
         <i class="fab fa-linkedin"></i> LinkedIn
@@ -102,12 +120,7 @@
         <i class="fab fa-github"></i> GitHub
       </a>
     </div>
-
-    <!-- Embedded Google Form -->
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeFumYKBc0WJ4_BnUPh5IsIRJCaKG6vyr1zwEkngFyyE4jzXg/viewform?embedded=true" marginheight="0" marginwidth="0">Loading…</iframe>
   </section>
-
-  <!-- Bootstrap JS -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
