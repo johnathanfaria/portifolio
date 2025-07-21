@@ -219,6 +219,12 @@
     .tag-data-cleaning { background:#fff0e5; color:#a44c00; }
     .tag-stakeholder { background:#fffbe7; color:#9c8500; }
     .tag-visualization { background:#e4f4fd; color:#1e67b7; }
+    .tag-sql { background:#f6faff; color:#0f567c; }
+    .tag-tableau { background:#f0eaff; color:#302db7; }
+    .tag-machine-learning { background:#fffbe7; color:#9c8500; }
+    .tag-matlab { background:#e6f7ff; color:#00728b; }
+    .tag-statistic { background:#ffe4e1; color:#8c1c0f; }
+    .tag-powerbi { background:#f0fff2; color:#268502; }
     @media (max-width: 900px) {
       .projects-grid {
         grid-template-columns: 1fr;
@@ -303,9 +309,9 @@
     <h2>Projects</h2>
     <div class="projects-grid">
 
-      <!-- NYU Faculty Promotion Project: FIRST CARD -->
+      <!-- NYU Faculty Promotion Project: FIRST CARD, new thumbnail -->
       <div class="project-card" data-categories="excel, eda, python, data cleaning, stakeholder management, visualization">
-        <img src="uny project/average student evaluation by year 2018-2024.png" alt="NYU Faculty Promotion Data Project">
+        <img src="uny project/average score by question asked 2018-2024.png" alt="NYU Faculty Promotion Data Project">
         <div class="card-body">
           <h4>NYU Faculty Promotion: Data Analytics & Visualization ($15K Raise)</h4>
           <p>
@@ -331,74 +337,129 @@
       </div>
 
       <!-- Project 1: NBA Champions' DNA Analysis -->
-      <div class="project-card" data-categories="sql, python, eda, machine learning, tableau">
+      <div class="project-card" data-categories="sql, python, eda, machine learning, tableau, visualization">
         <img src="images/project_1.jpeg" alt="NBA Champions DNA Analysis">
         <div class="card-body">
           <h4>NBA Champions' DNA Analysis</h4>
-          <p>(Ongoing...) Analysis of NBA championship teams' performance using statistical data and visualization.</p>
+          <p>
+            (Ongoing...) Analysis of NBA championship teams' performance using advanced EDA, machine learning, SQL, and Tableau dashboards to reveal the hidden patterns behind winning rosters.
+          </p>
           <div class="btn-container">
             <a href="pages/NBA.html" target="_blank" class="btn btn-primary">Read More</a>
             <a href="https://github.com/johnathanfaria/NBA-Champions-DNA" target="_blank" class="btn btn-secondary">View Code on GitHub</a>
           </div>
+          <div class="skill-tags">
+            <span class="tag-sql">SQL</span>
+            <span class="tag-python">Python</span>
+            <span class="tag-eda">EDA</span>
+            <span class="tag-machine-learning">Machine Learning</span>
+            <span class="tag-visualization">Visualization</span>
+            <span class="tag-tableau">Tableau</span>
+          </div>
         </div>
       </div>
+
       <!-- Project 2: Top Nations in Work-Life Harmony -->
-      <div class="project-card" data-categories="python, excel">
+      <div class="project-card" data-categories="python, excel, visualization">
         <img src="images/work-life-bal.png" alt="Work-Life Balance">
         <div class="card-body">
           <h4>Top Nations in Work-Life Harmony</h4>
-          <p>Exploring the correlation between work-life balance and GDP growth.</p>
+          <p>
+            Exploring the correlation between work-life balance and GDP growth through Excel, Python data wrangling, and custom visualization.
+          </p>
           <div class="btn-container">
             <a href="https://johnathanfaria.blogspot.com/p/top-nations-lead-in-work-life-harmony.html" target="_blank" class="btn btn-primary">Read More</a>
             <a href="https://github.com/johnathanfaria/work-life-balance" target="_blank" class="btn btn-secondary">View Code on GitHub</a>
           </div>
+          <div class="skill-tags">
+            <span class="tag-python">Python</span>
+            <span class="tag-excel">Excel</span>
+            <span class="tag-visualization">Visualization</span>
+          </div>
         </div>
       </div>
+
       <!-- Project 3: Bayesian State Estimation in Biochemical Processes -->
-      <div class="project-card" data-categories="python, excel, matlab, machine learning, advance statistic">
+      <div class="project-card" data-categories="python, excel, matlab, machine learning, advance statistic, visualization">
         <img src="images/thesis.jpg" alt="Biochemical Process">
         <div class="card-body">
           <h4>Bayesian State Estimation in Biochemical Processes</h4>
-          <p>Evaluating Bayesian estimators for biochemical process optimization.</p>
+          <p>
+            Evaluating Bayesian estimators for biochemical process optimization using Python, Matlab, and statistical modeling, producing actionable insights for process control.
+          </p>
           <div class="btn-container">
             <a href="https://johnathanfaria.blogspot.com/p/from-data-to-insights-enhancing.html" target="_blank" class="btn btn-primary">Read More</a>
             <a href="https://github.com/johnathanfaria/biochemical-processes-estimation" target="_blank" class="btn btn-secondary">View Code on GitHub</a>
           </div>
+          <div class="skill-tags">
+            <span class="tag-python">Python</span>
+            <span class="tag-excel">Excel</span>
+            <span class="tag-matlab">Matlab</span>
+            <span class="tag-machine-learning">Machine Learning</span>
+            <span class="tag-statistic">Advanced Statistic</span>
+            <span class="tag-visualization">Visualization</span>
+          </div>
         </div>
       </div>
+
       <!-- Project 4: Unveiling Football's Greatest -->
-      <div class="project-card" data-categories="python, excel, powerbi">
+      <div class="project-card" data-categories="python, excel, powerbi, visualization">
         <img src="images/footbal.png" alt="Football Analysis">
         <div class="card-body">
           <h4>Unveiling Football's Greatest</h4>
-          <p>Python-powered analysis of top footballers' goals and assists per game ratio.</p>
+          <p>
+            Python-powered analysis of top footballers' goals and assists per game, visualized in PowerBI and Excel for actionable sports insights.
+          </p>
           <div class="btn-container">
             <a href="https://johnathanfaria.blogspot.com/p/unveiling-data-behind-footballs.html" target="_blank" class="btn btn-primary">Read More</a>
             <a href="https://github.com/johnathanfaria/football" target="_blank" class="btn btn-secondary">View Code on GitHub</a>
           </div>
+          <div class="skill-tags">
+            <span class="tag-python">Python</span>
+            <span class="tag-excel">Excel</span>
+            <span class="tag-powerbi">PowerBI</span>
+            <span class="tag-visualization">Visualization</span>
+          </div>
         </div>
       </div>
+
       <!-- Project 5: Churn Analysis using EDA -->
-      <div class="project-card" data-categories="python, eda">
+      <div class="project-card" data-categories="python, eda, visualization">
         <img src="images/heatmap.png" alt="Churn Analysis">
         <div class="card-body">
           <h4>Churn Analysis using EDA</h4>
-          <p>Exploratory Data Analysis for churn in a telephone company.</p>
+          <p>
+            Exploratory Data Analysis for customer churn in a telecom, using Python for EDA and actionable dashboards.
+          </p>
           <div class="btn-container">
             <a href="pages/Churn Analysis.html" target="_blank" class="btn btn-primary">Read More</a>
             <a href="https://github.com/johnathanfaria" target="_blank" class="btn btn-secondary">View Code on GitHub</a>
           </div>
+          <div class="skill-tags">
+            <span class="tag-python">Python</span>
+            <span class="tag-eda">EDA</span>
+            <span class="tag-visualization">Visualization</span>
+          </div>
         </div>
       </div>
+
       <!-- Project 6: Automating Tennis Odds Collection -->
-      <div class="project-card" data-categories="python, machine learning, advance statistic">
+      <div class="project-card" data-categories="python, machine learning, advance statistic, visualization">
         <img src="images/tennis.jpg" alt="Tennis Odds Collection">
         <div class="card-body">
           <h4>Automating Tennis Odds Collection</h4>
-          <p>Automated extraction of tennis betting odds using image processing, OCR, and Google Sheets.</p>
+          <p>
+            Automated extraction of tennis betting odds using Python, image processing, OCR, and statistical models to fuel predictive analytics.
+          </p>
           <div class="btn-container">
             <a href="https://johnathanfaria.blogspot.com/p/tennis-odds-extraction-from-bet-365.html" target="_blank" class="btn btn-primary">Read More</a>
             <a href="https://github.com/johnathanfaria/tennis" target="_blank" class="btn btn-secondary">View Code on GitHub</a>
+          </div>
+          <div class="skill-tags">
+            <span class="tag-python">Python</span>
+            <span class="tag-machine-learning">Machine Learning</span>
+            <span class="tag-statistic">Advanced Statistic</span>
+            <span class="tag-visualization">Visualization</span>
           </div>
         </div>
       </div>
